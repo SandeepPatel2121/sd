@@ -1,4 +1,6 @@
-package com.nestlings.commonentity.utils;
+package com.nestlings.model;
+
+import org.springframework.http.HttpStatus;
 
 /**
  *
@@ -13,7 +15,5 @@ public class ResponseStatus {
         rs.setStatus(httpStatusCode);
         return rs;
     }
-   
-    
     
 }
