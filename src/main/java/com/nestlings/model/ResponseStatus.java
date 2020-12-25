@@ -1,7 +1,5 @@
 package com.nestlings.model;
 
-import org.springframework.http.HttpStatus;
-
 /**
  *
  * @author bypt-dev-laptop-9
