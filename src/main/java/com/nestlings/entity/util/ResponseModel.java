@@ -1,4 +1,4 @@
-package com.nestlings.commonentity.utils;
+package com.nestlings.entity.util;
 
 import lombok.Getter;
 import lombok.Setter;

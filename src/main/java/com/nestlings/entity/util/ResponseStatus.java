@@ -1,4 +1,4 @@
-package com.nestlings.commonentity.utils;
+package com.nestlings.entity.util;
 
 /**
  *
