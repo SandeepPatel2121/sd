@@ -1,4 +1,4 @@
-package com.nestlings.model;
+package com.nestlings.entities.utils;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
