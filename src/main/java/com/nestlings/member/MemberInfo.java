@@ -13,7 +13,7 @@ import lombok.Setter;
 @Getter
 public class MemberInfo {
     
-  private int userID;
+  private Integer userID;
   private String firstName;
   private String middleName;
   private String lastName;
