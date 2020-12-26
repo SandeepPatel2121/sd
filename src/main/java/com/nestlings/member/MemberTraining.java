@@ -19,5 +19,4 @@ public class MemberTraining  extends Company {
     private String endDate;
     private Address trainingAddress;  //may be different than company address
 
-
 }
