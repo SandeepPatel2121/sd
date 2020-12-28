@@ -19,6 +19,12 @@ public class HttpResponseStatus {
     public final static String USER_ALREADY_EXIST = "failed ! user already exist with given email address !";
     public final static String USER_FOUND_UNIQUE = "success ! user found unique !";
     
+     public final static String FACEBOOK_ID_MISSING = "failed ! user facebook id missing!";
+     
+     public final static String EMAIL_MISSING = "failed ! user email id missing!";
+     
+     public final static String GOOGLE_ID_MISSING = "failed ! user fackbook id missing!";
+    
     /**
      * Parameter Not Supplied
      */
@@ -27,8 +33,12 @@ public class HttpResponseStatus {
             
     public final static String USER_INFO = "success ! user info registered successfully !";
 
-
-
     public static final String USER_NOT_FOUND = "User not found.";
+    
+    public static final String FACEBOOK_USER_NOT_FOUND = "Unique User data not found for member with facebookId";
+    
+    public static final String GOOGLE_USER_NOT_FOUND = "Unique User data not found for member with googleId";
+    
+    public static final String SELECT_USER_TYPE = "User not selected";
     
 }
