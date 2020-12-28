@@ -1,15 +1,13 @@
-package com.nestlings.member;
+package com.nestlings.entities.response.member;
 
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
 @Getter
+@Setter
 public class MemberUniversityRating {
 
     private Integer userId;
-    private String userFirstName;
-    private String userLastName;
     private Integer collegeDetailsId;
     private Integer collegeRating;
     private String ratingDate;
