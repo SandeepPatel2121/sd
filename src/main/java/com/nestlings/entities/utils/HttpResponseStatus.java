@@ -41,4 +41,10 @@ public class HttpResponseStatus {
     
     public static final String SELECT_USER_TYPE = "User not selected";
     
+    public static final String SUCCESSFUL = "success";
+    
+    public static final String RESET_PASSWORD = "Password reset successfully.!!";
+
+
+    
 }
