@@ -1,4 +1,4 @@
-package com.nestlings.entities;
+package com.nestlings.entities.payment;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
