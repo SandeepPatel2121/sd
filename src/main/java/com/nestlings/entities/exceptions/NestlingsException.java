@@ -8,13 +8,19 @@ import com.nestlings.entities.enums.NestlingsExceptionType;
  */
 public class NestlingsException extends RuntimeException {
     
-    protected NestlingsExceptionType errorCode;
+       protected NestlingsExceptionType errorCode;
     protected String errorMessage;
-    
+
     public NestlingsException(NestlingsExceptionType type, RuntimeException runtimeException) {
         super(runtimeException.getMessage());
         this.errorCode = type;
         this.errorMessage = runtimeException.getMessage();
+    }
+
+    public NestlingsException(NestlingsExceptionType type,String errorMessage) {
+        super(errorMessage);
+        this.errorCode = type;
+        this.errorMessage = errorMessage;
     }
 
     public NestlingsExceptionType getErrorCode() {
