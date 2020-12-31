@@ -2,7 +2,10 @@
 package com.nestlings.member;
 
 import java.util.Date;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
@@ -11,6 +14,8 @@ import lombok.Setter;
  */
 @Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class MemberInfo {
     
   private Integer userID;
@@ -25,5 +30,9 @@ public class MemberInfo {
   private String profileCropImageUrl;
   private String profileImageUrl = "/img/prof.jpg";
   private Integer collegeDetailsId;
+
+  public String getDisplayName() {
+    return this.firstName + " " + this.lastName;
+  }
     
 }
