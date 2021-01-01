@@ -10,9 +10,10 @@ import lombok.Setter;
  */
 @Setter
 @Getter
-public class GreScore {
+public class profileScore {
     
-    private String greDate;
+    private Integer scoreID;
+    private String scoreDate;
     private Float verbal;
     private Float quantitative;
     private Float writing;
