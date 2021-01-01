@@ -11,4 +11,8 @@ public class MemberFriend {
     private String profileImageUrl;
     private String firstName;
     private String lastName;
+
+    public String getDisplayName() {
+        return getFirstName() + " " + getLastName();
+    }
 }
