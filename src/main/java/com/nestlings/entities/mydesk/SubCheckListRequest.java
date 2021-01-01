@@ -13,8 +13,8 @@ import lombok.Setter;
 @Getter
 public class SubCheckListRequest {
     
-    private Integer subCheckListID;
+    private Integer subChecklistID;
     private Integer status;
-    private String[] content;
+    private String content;
     private Timestamp createDate;
 }

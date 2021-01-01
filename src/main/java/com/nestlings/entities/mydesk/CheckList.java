@@ -1,6 +1,7 @@
 
 package com.nestlings.entities.mydesk;
 
+import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,9 +11,10 @@ import lombok.Setter;
  */
 @Setter
 @Getter
-public class CheckList extends SubCheckListRequest{
+public class CheckList{
     
     private Integer checklistID;
     private String title;
+    private List<SubCheckListRequest> subCheck;
   
 }
