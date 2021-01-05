@@ -19,6 +19,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
                 @PropertySource(value="classpath:nestlings.lookup.query.properties"),
                 @PropertySource(value="classpath:nestlings.auth.query.properties"),
                 @PropertySource(value="classpath:nestlings.university.query.properties"),
+                @PropertySource(value="classpath:nestlings.friend.query.properties"),
                @PropertySource(value="classpath:nestlings.config.properties"),
         }
 )
