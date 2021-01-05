@@ -10,6 +10,7 @@ import lombok.Setter;
 @Getter
 public class TestScore {
 
+    private Integer testScoreID;
     private String testDate;
     private Float english;
     private Float math;
