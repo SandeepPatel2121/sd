@@ -22,7 +22,6 @@ public class MemberWork extends Company {
     private boolean currentEmployment;
     private String title;
     private String description;
-    private Integer workType;
 
     public boolean getCurrentEmployment() {
         if(getEndDate() == null) {
