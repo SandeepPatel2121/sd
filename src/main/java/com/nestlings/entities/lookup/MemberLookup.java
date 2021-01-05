@@ -9,4 +9,5 @@ public class MemberLookup {
     private Integer userId;
     private String firstName;
     private String lastName;
+    private String profileImageUrl;
 }
