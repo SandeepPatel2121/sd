@@ -14,7 +14,7 @@ import lombok.Setter;
 public class SubCheckListRequest {
     
     private Integer subChecklistID;
-    private Integer status;
+    private String status;
     private String content;
     private Timestamp createDate;
 }
