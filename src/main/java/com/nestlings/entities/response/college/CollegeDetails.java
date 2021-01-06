@@ -2,6 +2,7 @@ package com.nestlings.entities.response.college;
 
 import com.nestlings.association.Address;
 
+import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.List;
 
@@ -45,6 +46,11 @@ public class CollegeDetails {
     private CollegeYearlyCost yearlyCost;
     private Integer collegeAdminUserId;
     private String collegeProfileConfig;
+    private BigDecimal longitude;
+    private BigDecimal latitude;
+    private String description;
+    private String duration;
+    private String intake;
 
     public Integer getCollegeDetailsId() {
         return collegeDetailsId;
@@ -322,5 +328,45 @@ public class CollegeDetails {
 
     public void setCollegeProfileConfig(String collegeProfileConfig) {
         this.collegeProfileConfig = collegeProfileConfig;
+    }
+
+    public BigDecimal getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(BigDecimal longitude) {
+        this.longitude = longitude;
+    }
+
+    public BigDecimal getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(BigDecimal latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+    public String getIntake() {
+        return intake;
+    }
+
+    public void setIntake(String intake) {
+        this.intake = intake;
     }
 }
