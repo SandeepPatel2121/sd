@@ -27,6 +27,8 @@ public class UniversitySearchResult {
     private String zip;
     private String countryCode;
     private boolean interested;
+    private String duration;
+    private String intake;
 
     @Getter(AccessLevel.NONE)
     private String searchString;

@@ -28,6 +28,8 @@ public class SuggstedUniversityResponse {
     private String countryCode;
     private String totalApplications;
     private boolean interested;
+    private String duration;
+    private String intake;
 
     @Getter(AccessLevel.NONE)
     private String searchString;
