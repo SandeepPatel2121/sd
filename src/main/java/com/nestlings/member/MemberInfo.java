@@ -30,6 +30,7 @@ public class MemberInfo {
   private String profileCropImageUrl;
   private String profileImageUrl = "/img/prof.jpg";
   private Integer collegeDetailsId;
+  private String role;
 
   public String getDisplayName() {
     return this.firstName + " " + this.lastName;

@@ -1,6 +1,7 @@
 
 package com.nestlings.entities.request;
 
+import com.nestlings.user.device.UserDeviceModel;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,6 +18,10 @@ public class FbSignupRequest {
 	private String email;
 	private String selectUserType;
         private Integer statusId;
+        private String profileImageUrl;
+        private UserDeviceModel deviceModel;
+
+
         
         public String getFirstName() {
 		if (getName() != null) {
