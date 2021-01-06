@@ -15,7 +15,7 @@ public class MyTask {
     
    private Integer taskID;
    private String title;
-   private Timestamp taskDate;
+   private String taskDate;
    private String content;
    private Integer userID;
    private Integer status;
