@@ -1,6 +1,7 @@
 
 package com.nestlings.entities.request;
 
+import com.nestlings.user.device.UserDeviceModel;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,5 +22,5 @@ public class RegistrationRequest {
 //    private Integer acceptPrivacy=0;
     private boolean emailError = false;
     private Integer collegeDetailsId;
-    
+    private UserDeviceModel deviceModel; 
 }

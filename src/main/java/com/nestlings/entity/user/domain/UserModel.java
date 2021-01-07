@@ -1,5 +1,6 @@
 package com.nestlings.entity.user.domain;
 
+import com.nestlings.user.device.UserDeviceModel;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,5 +17,6 @@ public class UserModel {
     private String password;
     private String authToken;
     private String role;
+    private UserDeviceModel deviceModel;
 
 }
