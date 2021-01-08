@@ -10,6 +10,13 @@ public class EntityConstants {
     public static final String LOGGED_IN_USER = "loggedInUser";
     
     /*
+     * FCM_PUSH_NOTIFICATION
+     */
+    public static final String NOTIFICATION_DATA_URL = "http://localhost:8084/notification/data";
+    public static final String ERRORMESSAGE_TO_SEND_NOTIFICATION = "Error to send notification";
+    public static final String SUCCESSMESSAGE_TO_SEND_NOTIFICATION = "Successfully to send notification";
+    
+    /*
      * EXCHANGE
      */
     public static final String MESSAGING_EXCHANGE = "nestlings_webapp";
