@@ -1,21 +1,7 @@
 package com.nestlings.entities.utils;
 
-import com.amazonaws.AmazonClientException;
-import com.amazonaws.AmazonServiceException;
-import com.amazonaws.auth.BasicAWSCredentials;
-import com.amazonaws.services.s3.AmazonS3;
-import com.amazonaws.services.s3.AmazonS3Client;
-import com.amazonaws.services.s3.model.ObjectMetadata;
-import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.nestlings.member.MemberInfo;
-import org.apache.commons.codec.binary.Base64;
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.*;
-import java.net.URL;
-import java.nio.ByteBuffer;
 import java.time.DateTimeException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -72,62 +58,5 @@ public class NestlingUtils {
             fullName = fullName + lastName;
         }
         return fullName;
-    }
-
-    public static String addUploadedUniversityImage(MultipartFile file, String access_key_id, String secret_key_id, String bucketName, String filePrefix) {
-//        byte[] imageData =null;
-//        try{
-//            imageData = file.getBytes();
-//        }
-//        catch(IOException e){
-//            return null;
-//        }
-        return uploadFileToS3(access_key_id, secret_key_id, bucketName, file, filePrefix);
-
-        //return upload(file.getOriginalFilename(),file.getBytes());
-    }
-
-    public static String uploadFileToS3(String access_key_id, String secret_key_id, String bucketName, MultipartFile file, String filePrefix) {
-        try {
-            AmazonS3 s3Client = new AmazonS3Client(new BasicAWSCredentials(access_key_id, secret_key_id));
-            String keyName = "profile-images/" + filePrefix + "/" + System.currentTimeMillis() + ".jpg";
-
-            File newFile = new File(file.getOriginalFilename());
-            FileOutputStream fos = new FileOutputStream(newFile);
-            fos.write(file.getBytes());
-            fos.close();
-
-            // Upload a file as a new object with ContentType and title specified.
-            PutObjectRequest request = new PutObjectRequest(bucketName, keyName, newFile);
-            s3Client.putObject(request);
-
-            newFile.delete();
-
-            return ((AmazonS3Client) s3Client).getResourceUrl(bucketName, keyName);
-
-        } catch (AmazonServiceException ase) {
-            System.out.println("Caught an AmazonServiceException, which " +
-                    "means your request made it " +
-                    "to Amazon S3, but was rejected with an error response" +
-                    " for some reason.");
-            System.out.println("Error Message:    " + ase.getMessage());
-            System.out.println("HTTP Status Code: " + ase.getStatusCode());
-            System.out.println("AWS Error Code:   " + ase.getErrorCode());
-            System.out.println("Error Type:       " + ase.getErrorType());
-            System.out.println("Request ID:       " + ase.getRequestId());
-        } catch (AmazonClientException ace) {
-            System.out.println("Caught an AmazonClientException, which " +
-                    "means the client encountered " +
-                    "an internal error while trying to " +
-                    "communicate with S3, " +
-                    "such as not being able to access the network.");
-            System.out.println("Error Message: " + ace.getMessage());
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return null;
     }
 }
