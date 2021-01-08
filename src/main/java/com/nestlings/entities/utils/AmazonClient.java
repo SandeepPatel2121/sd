@@ -56,18 +56,45 @@ public class AmazonClient {
         s3client.putObject(new PutObjectRequest(bucketName, fileName, file));
     }
 
-    public String uploadFile(MultipartFile multipartFile,String collegeId) {
+    public String uploadFile(MultipartFile multipartFile,String id,String type) {
         String fileUrl = "";
-        String keyName="";
+        String key = "";
+
         try {
             File file = convertMultiPartToFile(multipartFile);
-            keyName = "University/" + collegeId + "/" + System.currentTimeMillis() + multipartFile.getOriginalFilename();
-            fileUrl = endpointUrl + "/" + keyName;
-            uploadFileTos3bucket(keyName, file);
+            String keyName = getKeyName(type,id);
+            key = keyName + System.currentTimeMillis() + multipartFile.getOriginalFilename();
+            fileUrl = endpointUrl + "/" + key;
+            uploadFileTos3bucket(key, file);
             file.delete();
         } catch (Exception e) {
             e.printStackTrace();
         }
         return fileUrl;
+    }
+
+    private String getKeyName(String type,String id){
+
+        String keyName= "";
+
+        switch (type){
+            case "university-pics":
+                keyName = getUniversityPicsKeyName(id);
+                break;
+            case "user-docs":
+                keyName = getUserDocsKeyName(id);
+                break;
+            default:
+                keyName = "all/";
+        }
+        return keyName;
+    }
+
+    private String getUniversityPicsKeyName(String id){
+        return "University/" + id + "/";
+    }
+
+    private String getUserDocsKeyName(String id){
+        return "User/" + id + "/documents/";
     }
 }
