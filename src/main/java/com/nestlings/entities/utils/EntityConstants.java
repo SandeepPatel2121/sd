@@ -8,7 +8,9 @@ public class EntityConstants {
 
     public static final String USER_CODE_PREFIX = "U";
     public static final String LOGGED_IN_USER = "loggedInUser";
-    
+
+
+    public static final String UNIVERSITY_SERVICE_URL = "http://localhost:8082/";
     /*
      * FCM_PUSH_NOTIFICATION
      */
