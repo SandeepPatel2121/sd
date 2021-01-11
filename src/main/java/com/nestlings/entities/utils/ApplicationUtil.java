@@ -1,17 +1,17 @@
 package com.nestlings.entities.utils;
 
 import java.io.ByteArrayInputStream;
-import org.springframework.stereotype.Component;
-import org.apache.commons.codec.binary.Base64;
 
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.auth.BasicAWSCredentials;
+import org.springframework.stereotype.Component;
+import org.apache.commons.codec.binary.Base64;
+
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.PutObjectRequest;
-
 
 /**
  *

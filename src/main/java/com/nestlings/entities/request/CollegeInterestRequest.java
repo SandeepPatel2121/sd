@@ -8,6 +8,5 @@ import lombok.Setter;
 public class CollegeInterestRequest {
 
     private Integer collegeDetailsId;
-    private Integer userId;
     private boolean interest;
 }

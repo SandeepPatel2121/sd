@@ -5,7 +5,7 @@ package com.nestlings.user.device;
  *
  * @author ú
  */
-public enum Application {
+public enum DeviceType {
     
     
     WEB("web"),
@@ -14,7 +14,7 @@ public enum Application {
    
     private String desc;
 
-    Application(String desc) {
+    DeviceType(String desc) {
         this.desc = desc;
     }
 

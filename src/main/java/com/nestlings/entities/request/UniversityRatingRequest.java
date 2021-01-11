@@ -7,7 +7,6 @@ import lombok.Setter;
 @Setter
 public class UniversityRatingRequest {
 
-    private Integer userId;
     private Integer collegeDetailsId;
     private String userRatingType;
     private Integer userRating;
