@@ -30,8 +30,8 @@ public class MessagingConfig {
     @Value("${spring.rabbitmq.host}")
     private String HOST;
     
-    @Value("${spring.rabbitmq.port}")
-    private Integer PORT;
+//    @Value("${spring.rabbitmq.port}")
+//    private Integer PORT;
     
     @Value("${spring.rabbitmq.username}")
     private String USERNAME;
@@ -44,7 +44,7 @@ public class MessagingConfig {
         CachingConnectionFactory connectionFactory = new CachingConnectionFactory();
         
         connectionFactory.setHost(HOST);
-        connectionFactory.setPort(PORT);
+//        connectionFactory.setPort(PORT);
         connectionFactory.setUsername(USERNAME);
         connectionFactory.setPassword(PASSWORD);
         
