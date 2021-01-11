@@ -25,7 +25,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
                 @PropertySource(value="classpath:nestlings.messaging.query.properties"),
                 @PropertySource(value="classpath:nestlings.status.query.properties"),
                 @PropertySource(value="classpath:nestlings.notifications.query.properties"),
-                @PropertySource(value="classpath:nestlings.college.application.query.properties")
+                @PropertySource(value="classpath:nestlings.college.application.query.properties"),
+                @PropertySource(value="classpath:nestlings.payment.query.properties")
         }
 )
 public class NestlingsPropertyInitConfig extends WebMvcConfigurerAdapter {
