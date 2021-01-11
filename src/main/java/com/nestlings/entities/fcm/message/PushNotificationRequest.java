@@ -1,6 +1,7 @@
 
 package com.nestlings.entities.fcm.message;
 
+import com.nestlings.user.device.DeviceType;
 import lombok.Data;
 
 /**
@@ -25,7 +26,7 @@ public class PushNotificationRequest {
         this.topic = topicName;
     }
     
-    public PushNotificationRequest(String notificationType, String title, String messageBody, String token) {
+    public PushNotificationRequest(String notificationType, String title, String messageBody,String token) {
         this.notificationType = notificationType;
         this.title = title;
         this.message = messageBody;

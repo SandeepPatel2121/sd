@@ -6,6 +6,7 @@ package com.nestlings.entities.enums;
  */
 public enum MessagingType {
     
-    LOGGED_IN_SUCCESS;
+    LOGGED_IN_SUCCESS,
+    PUSH_NOTIFICATION;
 
 }
