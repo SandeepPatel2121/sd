@@ -35,6 +35,26 @@ public class NestlingUtils {
     public static final String UNIVERSITY_APPLICATION_APPLICATION_NEEDS_MORE_INFO = "APPLICATION_NEEDS_MORE_INFO";
     public static final String UNIVERSITY_APPLICATION_APPLICATION_WAITLISTED = "APPLICATION_WAITLISTED";
 
+    static {
+        loadUniversityApplicationStatuses();
+    }
+
+    public static void loadUniversityApplicationStatuses() {
+        universityApplicationStatuses.put(14, NestlingUtils.UNIVERSITY_APPLICATION_APPLICATION_SENT);
+        universityApplicationStatuses.put(15, NestlingUtils.UNIVERSITY_APPLICATION_APPLICATION_ACCEPTED);
+        universityApplicationStatuses.put(16, NestlingUtils.UNIVERSITY_APPLICATION_APPLICATION_DENIED);
+        universityApplicationStatuses.put(17, NestlingUtils.UNIVERSITY_APPLICATION_APPLICATION_SAVED);
+        universityApplicationStatuses.put(18, NestlingUtils.UNIVERSITY_APPLICATION_APPLICATION_IN_CONSIDERATION);
+        universityApplicationStatuses.put(19, NestlingUtils.UNIVERSITY_APPLICATION_APPLICATION_NEEDS_MORE_INFO);
+        universityApplicationStatuses.put(20, NestlingUtils.UNIVERSITY_APPLICATION_APPLICATION_WAITLISTED);
+    }
+
+    public static String getUniversityApplicationStatusByStatusId(Integer statusId) {
+        String status = universityApplicationStatuses.get(statusId);
+        return status;
+    }
+
+
     public static String convertDateStringFormat(String inputDateString, DateTimeFormatter inputDateTimeFormatter, DateTimeFormatter outputDateTimeFormatter) {
         try {
             return LocalDateTime.parse(inputDateString,inputDateTimeFormatter).format(outputDateTimeFormatter);
@@ -58,5 +78,15 @@ public class NestlingUtils {
             fullName = fullName + lastName;
         }
         return fullName;
+    }
+
+    public static Integer getUniversityApplicationStatusIdByStatus(String status) {
+        Integer statusId = null;
+        for(Map.Entry<Integer, String> applicationStatus : universityApplicationStatuses.entrySet()) {
+            if(applicationStatus.getValue().equalsIgnoreCase(status)) {
+                statusId = applicationStatus.getKey();
+            }
+        }
+        return statusId;
     }
 }

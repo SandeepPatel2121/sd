@@ -21,7 +21,8 @@ public class ApplicationForUsersModel {
     private String coverImageUrl;
     private Integer applicationStatus;
     private String applicationStatusValue;
-    private Integer applicationTrackId;
+    private Integer messageThreadId;
+    private Long applicationTrackId;
     private String createdDate;
     private String updatedDate;
 

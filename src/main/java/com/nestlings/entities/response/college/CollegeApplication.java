@@ -31,6 +31,7 @@ public class CollegeApplication {
     private SendMessageRequest messageRequest;
 
     private String profileImageUrl;
+    private long applicationTrackId;
 
     public Integer getApplicationId() {
         return applicationId;
@@ -154,6 +155,14 @@ public class CollegeApplication {
 
     public void setProfileImageUrl(String profileImageUrl) {
         this.profileImageUrl = profileImageUrl;
+    }
+
+    public long getApplicationTrackId() {
+        return applicationTrackId;
+    }
+
+    public void setApplicationTrackId(long applicationTrackId) {
+        this.applicationTrackId = applicationTrackId;
     }
 }
 
