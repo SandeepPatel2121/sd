@@ -16,5 +16,6 @@ public class UserDeviceModel {
     private Integer userID;
     private String deviceName;
     private DeviceType deviceType;
-    private String token;   
+    private String token;  
+    private String version;
 }

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.nestlings.entities.utils;
 
 /**
@@ -44,6 +40,12 @@ public class HttpResponseStatus {
     public static final String SUCCESSFUL = "success";
     
     public static final String RESET_PASSWORD = "Password reset successfully.!!";
+    
+    public final static String NOTIFICTION_LIST = "success ! notification listed successfully.";
+    
+    public final static String UNIVERSITY_SAVE = "success ! university save successfully.";
+
+    public final static String UNIVERSITY_REMOVE = "success ! university remove successfully.";
 
 
     
