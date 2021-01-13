@@ -4,6 +4,8 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Getter
 @Setter
 public class SuggstedUniversityResponse {
@@ -30,6 +32,8 @@ public class SuggstedUniversityResponse {
     private boolean interested;
     private String duration;
     private String intake;
+    private boolean saved;
+    private BigDecimal applicationFees;
 
     @Getter(AccessLevel.NONE)
     private String searchString;
