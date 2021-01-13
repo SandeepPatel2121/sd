@@ -46,6 +46,9 @@ public class HttpResponseStatus {
     public final static String UNIVERSITY_SAVE = "success ! university save successfully.";
 
     public final static String UNIVERSITY_REMOVE = "success ! university remove successfully.";
+    
+        public final static String APPLICATION_LIST = "success ! application listed successfully.";
+
 
 
     
