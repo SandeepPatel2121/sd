@@ -53,13 +53,13 @@ public class DateTimeConversion {
         return null;
     }
     
-     public static String calendarToddMMYYHHMMSS1(Calendar calender) {
+     public static String calendarToYYMMDDHHMMSS(Calendar calender) {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return String.valueOf(formatter.format(calender.getTime()));
     }
     
     public static String convetStringDateTimetoDateStringFormat1(String date){
-        return calendarToddMMYYHHMMSS1(stringToCalendar1(date));
+        return calendarToYYMMDDHHMMSS(stringToCalendar1(date));
     }
 
     
@@ -70,7 +70,7 @@ public class DateTimeConversion {
             Calendar cal = Calendar.getInstance();
             Calendar ca2 = Calendar.getInstance();
             cal.setTime(date1);
-             ca2.set(Calendar.DAY_OF_MONTH, cal.get(Calendar.DAY_OF_MONTH) + 7);
+            ca2.set(Calendar.DAY_OF_MONTH, cal.get(Calendar.DAY_OF_MONTH) + 7);
             ca2.set(Calendar.MONTH, cal.get(Calendar.MONTH));
             ca2.set(Calendar.YEAR, cal.get(Calendar.YEAR));
             ca2.set(Calendar.HOUR_OF_DAY, cal.get(Calendar.HOUR_OF_DAY));
