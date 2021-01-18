@@ -51,6 +51,10 @@ public class CollegeDetails {
     private String description;
     private String duration;
     private String intake;
+    private BigDecimal applicationFees;
+    private boolean saved;
+    private Integer rank;
+    private Integer acceptanceRate;
 
     public Integer getCollegeDetailsId() {
         return collegeDetailsId;
@@ -368,5 +372,37 @@ public class CollegeDetails {
 
     public void setIntake(String intake) {
         this.intake = intake;
+    }
+
+    public BigDecimal getApplicationFees() {
+        return applicationFees;
+    }
+
+    public void setApplicationFees(BigDecimal applicationFees) {
+        this.applicationFees = applicationFees;
+    }
+
+    public boolean isSaved() {
+        return saved;
+    }
+
+    public void setSaved(boolean saved) {
+        this.saved = saved;
+    }
+
+    public Integer getRank() {
+        return rank;
+    }
+
+    public void setRank(Integer rank) {
+        this.rank = rank;
+    }
+
+    public Integer getAcceptanceRate() {
+        return acceptanceRate;
+    }
+
+    public void setAcceptanceRate(Integer acceptanceRate) {
+        this.acceptanceRate = acceptanceRate;
     }
 }
