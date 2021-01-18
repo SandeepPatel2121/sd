@@ -18,6 +18,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
+import java.net.URI;
+
 /**
  *
  * @author bypt-dev-laptop-9
@@ -29,25 +31,29 @@ public class MessagingConfig {
 
     @Value("${spring.rabbitmq.host}")
     private String HOST;
-    
+
     @Value("${spring.rabbitmq.port}")
     private Integer PORT;
-    
+
     @Value("${spring.rabbitmq.username}")
     private String USERNAME;
-    
+
     @Value("${spring.rabbitmq.password}")
     private String PASSWORD;
-    
+
+    @Value("${spring.rabbitmq.address.url}")
+    private String RABBIT_URI;
+
     @Bean
     public ConnectionFactory connectionFactory() {
         CachingConnectionFactory connectionFactory = new CachingConnectionFactory();
-        
-        connectionFactory.setHost(HOST);
-        connectionFactory.setPort(PORT);
+
+//        connectionFactory.setHost(HOST);
+//        connectionFactory.setPort(PORT);
+        connectionFactory.setUri(URI.create(RABBIT_URI));
         connectionFactory.setUsername(USERNAME);
         connectionFactory.setPassword(PASSWORD);
-        
+
         return connectionFactory;
     }
 
