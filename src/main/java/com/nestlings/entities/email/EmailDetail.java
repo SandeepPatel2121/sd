@@ -1,10 +1,6 @@
 
 package com.nestlings.entities.email;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,5 +17,4 @@ public class EmailDetail {
     private Boolean isHtml;
     private Boolean isMultipart;
     private String to;
-//    private String to = new String();
 }

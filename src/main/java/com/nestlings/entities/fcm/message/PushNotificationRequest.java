@@ -1,7 +1,6 @@
 
 package com.nestlings.entities.fcm.message;
 
-import com.nestlings.user.device.DeviceType;
 import lombok.Data;
 
 /**

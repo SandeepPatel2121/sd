@@ -53,7 +53,7 @@ public class SendEmailConfig {
         try {
             msg.setFrom(new InternetAddress(fromAddress, "Nestlings"));
         } catch (UnsupportedEncodingException e) {
-            log.error("UnsupportedEncodingException",e.getMessage());
+            log.error("UnsupportedEncodingException {}",e.getMessage());
         }
         msg.setRecipient(Message.RecipientType.TO, new InternetAddress(emailDetail.getTo()));
         msg.setSubject(emailDetail.getSubject());

@@ -30,10 +30,8 @@ public class Classified {
 
     public String getCollegeAddress() {
         StringBuilder sb = new StringBuilder();
-        boolean hasElement = false;
         if(getStreetName() != null) {
             sb.append(getStreetName() + " ");
-            hasElement = true;
         }
 
         if(getCity() != null) {

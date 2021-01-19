@@ -33,6 +33,7 @@ public class UniversitySearchResult {
     private String intake;
     private boolean saved;
     private BigDecimal applicationFees;
+    private Integer totalApplications = 0;
 
     @Getter(AccessLevel.NONE)
     private String searchString;
@@ -43,26 +44,26 @@ public class UniversitySearchResult {
             sb.append(getStreetName());
         }
         if(getCity() != null) {
-            sb.append(", " + getCity());
+            sb.append(", ").append(getCity());
         }
         if(getZip() != null) {
-            sb.append(" " + getZip());
+            sb.append(" ").append(getZip());
         }
 
         if(getStateCode() != null) {
-            sb.append(" " + getStateCode());
+            sb.append(" ").append(getStateCode());
         } else if(getState() != null) {
-            sb.append(" " + getState());
+            sb.append(" ").append(getState());
         }
 
         if(getCountryCode() != null) {
-            sb.append(", " + getCountryCode());
+            sb.append(", ").append(getCountryCode());
         }
         return sb.toString();
     }
 
     public String getSearchString() {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         if(this.getCollegeName() != null) {
             sb.append(getCollegeName().toLowerCase());
         }
