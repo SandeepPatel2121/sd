@@ -89,8 +89,7 @@ public class MessageDetails {
     }
 
     public String getToMembersDisplay() {
-        if (toMembersDisplay == null) {
-            if (!toMembers.isEmpty()) {
+        if (toMembersDisplay == null && !toMembers.isEmpty()) {
                 StringBuilder sb = new StringBuilder();
                 for (int i = 0; i < toMembers.size(); i++) {
                     MemberInfo mi = toMembers.get(i);
@@ -100,7 +99,6 @@ public class MessageDetails {
                     }
                 }
                 toMembersDisplay = sb.toString();
-            }
         }
         return toMembersDisplay;
     }
