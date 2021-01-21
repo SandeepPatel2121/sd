@@ -30,29 +30,27 @@ import java.net.URI;
 public class MessagingConfig {
 
     @Value("${spring.rabbitmq.host}")
-    private String HOST;
+    private String host;
 
     @Value("${spring.rabbitmq.port}")
-    private Integer PORT;
+    private Integer port;
 
     @Value("${spring.rabbitmq.username}")
-    private String USERNAME;
+    private String username;
 
     @Value("${spring.rabbitmq.password}")
-    private String PASSWORD;
+    private String password;
 
     @Value("${spring.rabbitmq.address.url}")
-    private String RABBIT_URI;
+    private String rabbit_url;
 
     @Bean
     public ConnectionFactory connectionFactory() {
         CachingConnectionFactory connectionFactory = new CachingConnectionFactory();
 
-//        connectionFactory.setHost(HOST);
-//        connectionFactory.setPort(PORT);
-        connectionFactory.setUri(URI.create(RABBIT_URI));
-        connectionFactory.setUsername(USERNAME);
-        connectionFactory.setPassword(PASSWORD);
+        connectionFactory.setUri(URI.create(rabbit_url));
+        connectionFactory.setUsername(username);
+        connectionFactory.setPassword(password);
 
         return connectionFactory;
     }

@@ -1,4 +1,3 @@
-
 package com.nestlings.association;
 
 import lombok.Getter;
@@ -10,7 +9,7 @@ import lombok.Setter;
  */
 @Setter
 @Getter
-public class profileScore {
+public class Score {
     
     private Integer scoreID;
     private String scoreDate;

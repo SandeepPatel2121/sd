@@ -3,7 +3,6 @@ package com.nestlings.entities.response.college;
 import com.nestlings.association.Address;
 
 import java.math.BigDecimal;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -35,8 +34,6 @@ public class CollegeDetails {
     private String accessibility;
     private String accreditingOrganization;
     private String studyOptions;
-    //private List<CollegeProgram> programs;
-    //private CollegeRating collegeRating;
     private Integer totalApplications = 0;
     private String generalPhoneNumber;
     private String generalUrl;
@@ -231,25 +228,6 @@ public class CollegeDetails {
     public void setStudyOptions(String studyOptions) {
         this.studyOptions = studyOptions;
     }
-
-//    public List<CollegeProgram> getPrograms() {
-//        if(programs != null) {
-//            Collections.sort(programs,(CollegeProgram cp1, CollegeProgram cp2) -> cp1.getName().compareTo(cp2.getName()));
-//        }
-//        return programs;
-//    }
-//
-//    public void setPrograms(List<CollegeProgram> programs) {
-//        this.programs = programs;
-//    }
-//
-//    public CollegeRating getCollegeRating() {
-//        return collegeRating;
-//    }
-//
-//    public void setCollegeRating(CollegeRating collegeRating) {
-//        this.collegeRating = collegeRating;
-//    }
 
     public Integer getStatusId() {
         return statusId;

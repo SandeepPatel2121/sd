@@ -19,7 +19,6 @@ public class RegistrationRequest {
     private String emailID;
     private String password;
     private Integer statusId;
-//    private Integer acceptPrivacy=0;
     private boolean emailError = false;
     private Integer collegeDetailsId;
     private UserDeviceModel deviceModel; 

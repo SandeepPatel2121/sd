@@ -1,15 +1,19 @@
 package com.nestlings.entities.exceptions;
 
 import com.nestlings.entities.enums.NestlingsExceptionType;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  *
  * @author bypt-dev-laptop-9
  */
+@Setter
+@Getter
 public class NestlingsException extends RuntimeException {
     
-       protected NestlingsExceptionType errorCode;
-    protected String errorMessage;
+    private final NestlingsExceptionType errorCode;
+    private final String errorMessage;
 
     public NestlingsException(NestlingsExceptionType type, RuntimeException runtimeException) {
         super(runtimeException.getMessage());
@@ -21,22 +25,5 @@ public class NestlingsException extends RuntimeException {
         super(errorMessage);
         this.errorCode = type;
         this.errorMessage = errorMessage;
-    }
-
-    public NestlingsExceptionType getErrorCode() {
-        return errorCode;
-    }
-
-    public void setErrorCode(NestlingsExceptionType errorCode) {
-        this.errorCode = errorCode;
-    }
-
-    public String getErrorMessage() {
-        return errorMessage;
-    }
-
-    public void setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-    }
-    
+    }    
 }
