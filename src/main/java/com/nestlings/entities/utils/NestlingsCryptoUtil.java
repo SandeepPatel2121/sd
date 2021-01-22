@@ -1,9 +1,6 @@
 package com.nestlings.entities.utils;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-
 import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
@@ -15,11 +12,11 @@ import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 import java.util.Base64;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Component
 public class NestlingsCryptoUtil {
-
-    private final Logger logger = LoggerFactory.getLogger(NestlingsCryptoUtil.class);
 
     private static final String UNICODE_FORMAT = "UTF8";
     public static final String DESEDE_ENCRYPTION_SCHEME = "DESede";
@@ -49,7 +46,7 @@ public class NestlingsCryptoUtil {
             byte[] encryptedText = cipher.doFinal(plainText);
             encryptedString = new String(Base64.getEncoder().encode(encryptedText));
         } catch (Exception e) {
-            logger.error(e.getMessage(), e);
+            log.error(e.getMessage(), e);
         }
         return encryptedString;
     }
@@ -62,8 +59,7 @@ public class NestlingsCryptoUtil {
             byte[] plainText = cipher.doFinal(encryptedText);
             decryptedText = new String(plainText);
         } catch (Exception e) {
-            logger.error("Unable to decrypt your string.");
-            //throw new EncryptedTokenNotValidExcepton("Unable to decrypt your string.");
+            log.error("Unable to decrypt your string.");
         }
         return decryptedText;
     }

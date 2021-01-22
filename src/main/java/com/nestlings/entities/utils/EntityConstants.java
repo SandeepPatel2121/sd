@@ -34,6 +34,15 @@ public class EntityConstants {
     public static final String MESSAGING_NOTIFICATION_ROUTING = "notification";
     
     /*
+     * EMAIL
+     */
+    
+    public static final String FULLNAME = "fullName";
+    public static final String NOTIFICATION_MESSAGE = "notificationMessage";
+    public static final String NOTIFICATION_URL = "notificationsUrl";
+    public static final String EMAIL_URL = "emailUnsubscribeUrl";
+
+    /*
      * USER
      */
         

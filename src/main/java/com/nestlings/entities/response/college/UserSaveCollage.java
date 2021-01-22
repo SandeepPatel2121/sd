@@ -1,5 +1,5 @@
 
-package com.nestlings.entity.collage;
+package com.nestlings.entities.response.college;
 
 import lombok.Getter;
 import lombok.Setter;

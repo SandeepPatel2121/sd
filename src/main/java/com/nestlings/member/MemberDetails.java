@@ -267,8 +267,6 @@ public class MemberDetails {
     public Integer getAge() {
         if(getDob() != null) {
             LocalDate today = LocalDate.now();
-            //Instant instant = new Date(getDob()).toInstant();
-           // LocalDate dobDate = instant.atZone(ZoneId.systemDefault()).toLocalDate();
             Long longDate = ChronoUnit.YEARS.between(LocalDate.parse(getDob()),today);
             age = longDate.intValue();
         }
