@@ -13,7 +13,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class NotificationResponse {
     
-      private Integer userId;
+    private Integer userId;
     private Integer entityId;
     private Integer notificationId;
     private Integer notificationTypeId;
@@ -23,7 +23,7 @@ public class NotificationResponse {
     private String name;
     private String createdDate;
 
-    public NotificationResponse(Integer notificationTypeId, Integer statusId, String notification, Integer userId, Integer entityId, String objectDetails) {
+    public NotificationResponse(Integer notificationTypeId, Integer statusId, String notification, Integer userId, Integer entityId) {
         this.notificationTypeId = notificationTypeId;
         this.statusId = statusId;
         this.notification = notification;

@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class CollegeDetails {
 
-    private final String NO_DATA = "No Data";
+    private static final String NO_DATA = "No Data";
     private Integer collegeDetailsId;
     private Integer unitId;
     private String collegeName;
@@ -110,7 +110,7 @@ public class CollegeDetails {
     }
 
     public String getSelectivity() {
-        return (selectivity == null) ? "No Data" : selectivity;
+        return (selectivity == null) ? NO_DATA : selectivity;
     }
 
     public void setSelectivity(String selectivity) {
@@ -126,7 +126,7 @@ public class CollegeDetails {
     }
 
     public String getReligiousAffiliation() {
-        return (religiousAffiliation == null) ? "No Data" : religiousAffiliation;
+        return (religiousAffiliation == null) ? NO_DATA : religiousAffiliation;
     }
 
     public void setReligiousAffiliation(String religiousAffiliation) {
@@ -150,7 +150,7 @@ public class CollegeDetails {
     }
 
     public String getSpecialAffinity() {
-        return (specialAffinity == null) ? "No Data" : specialAffinity;
+        return (specialAffinity == null) ? NO_DATA : specialAffinity;
     }
 
     public void setSpecialAffinity(String specialAffinity) {
@@ -166,7 +166,7 @@ public class CollegeDetails {
     }
 
     public String getRegionalAcceditations() {
-        return (regionalAcceditations == null) ? "No Data" : regionalAcceditations;
+        return (regionalAcceditations == null) ? NO_DATA : regionalAcceditations;
     }
 
     public void setRegionalAcceditations(String regionalAcceditations) {
@@ -174,7 +174,7 @@ public class CollegeDetails {
     }
 
     public String getEnvironment() {
-        return (environment == null) ? "No Data" : environment;
+        return (environment == null) ? NO_DATA : environment;
     }
 
     public void setEnvironment(String environment) {
@@ -198,7 +198,7 @@ public class CollegeDetails {
     }
 
     public String getHealthWellnessSupport() {
-        return (healthWellnessSupport == null) ? "No Data" : healthWellnessSupport;
+        return (healthWellnessSupport == null) ? NO_DATA : healthWellnessSupport;
     }
 
     public void setHealthWellnessSupport(String healthWellnessSupport) {
@@ -206,7 +206,7 @@ public class CollegeDetails {
     }
 
     public String getAccessibility() {
-        return (accessibility == null) ? "No Data" : accessibility;
+        return (accessibility == null) ? NO_DATA : accessibility;
     }
 
     public void setAccessibility(String accessibility) {
@@ -214,7 +214,7 @@ public class CollegeDetails {
     }
 
     public String getAccreditingOrganization() {
-        return (accreditingOrganization == null) ? "No Data" : accreditingOrganization;
+        return (accreditingOrganization == null) ? NO_DATA : accreditingOrganization;
     }
 
     public void setAccreditingOrganization(String accreditingOrganization) {
@@ -222,7 +222,7 @@ public class CollegeDetails {
     }
 
     public String getStudyOptions() {
-        return (studyOptions == null) ? "No Data" : studyOptions;
+        return (studyOptions == null) ? NO_DATA : studyOptions;
     }
 
     public void setStudyOptions(String studyOptions) {

@@ -91,14 +91,14 @@ public class UserRecommendation {
 
                 if(recommendation.getRecommendationLocations() != null && recommendation.getRecommendationLocations().length > 0) {
                     int len = recommendation.getRecommendationLocations().length;
-                    String locations = null;
+                    StringBuilder locations = new StringBuilder();
                     for(int i = 0; i < recommendation.getRecommendationLocations().length; i++) {
-                        locations += recommendation.getRecommendationLocations()[i];
+                        locations.append(recommendation.getRecommendationLocations()[i]);
                         if(len > 1 && i < len) {
-                            locations += ", ";
+                            locations.append(", ");
                         }
                     }
-                    this.setRecommendedFromLocations(locations);
+                    this.setRecommendedFromLocations(locations.toString());
                 }
 
                 if(recommendation.getRecommendationType() != null) {

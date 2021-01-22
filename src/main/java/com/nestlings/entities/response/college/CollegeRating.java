@@ -37,7 +37,7 @@ public class CollegeRating {
 
     public Double getTotalRatingAverage() {
         if(totalRatingAverage == null) {
-            return  Double.valueOf(0);
+            return (double) 0;
         }
         return totalRatingAverage;
     }

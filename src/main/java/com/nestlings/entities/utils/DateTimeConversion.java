@@ -1,17 +1,22 @@
 package com.nestlings.entities.utils;
 
-import java.text.DateFormat;
+import lombok.extern.slf4j.Slf4j;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+@Slf4j
 public class DateTimeConversion {
 
     private static final String DATE_TIME_FORMAT = "dd/MM/yyyy HH:mm:ss";
+    public static final String FORMAT_YYYY_MM_DD_HH_MM_SS = "yyyy-MM-dd HH:mm:ss";
+
+    private DateTimeConversion(){}
 
     public static String calendarToddMMYYHHMMSS(Calendar calender) {
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        SimpleDateFormat formatter = new SimpleDateFormat(DATE_TIME_FORMAT);
         return String.valueOf(formatter.format(calender.getTime()));
     }
 
@@ -26,20 +31,32 @@ public class DateTimeConversion {
     }
 
     public static String convetStringDateDemotoDateTimeStringFormat(String date){
-        return calendarToddMMYYHHMMSS(stringToCalendar(date));
+        Calendar calendar = stringToCalendar(date);
+        if(calendar!=null){
+            return calendarToddMMYYHHMMSS(calendar);
+        }
+        return null;
     }
 
     public static String convetStringDateTimetoDateTimeStringFormat(String date){
-        return calendarToddMMYYYYHHMM(stringToCalendar(date));
+        Calendar calendar = stringToCalendar(date);
+        if(calendar!=null){
+            return calendarToddMMYYYYHHMM(calendar);
+        }
+        return null;
     }
 
 
     public static String convetStringDateTimetoDateStringFormat(String date){
-        return calendarToddMMYYYY(stringToCalendar(date));
+        Calendar calendar = stringToCalendar(date);
+        if(calendar!=null){
+            return calendarToddMMYYYY(calendar);
+        }
+        return null;
     }
 
     public static Calendar stringToCalendar(String strDate) {
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat formatter = new SimpleDateFormat(FORMAT_YYYY_MM_DD_HH_MM_SS);
         Calendar cal = null;
         if (strDate!=null && (!strDate.isEmpty())){
             try {
@@ -48,25 +65,30 @@ public class DateTimeConversion {
                 cal.setTime(date1);
                 return cal;
             } catch (ParseException ex) {
+                log.error("Error in stringToCalendar...");
             }
         }
         return null;
     }
     
      public static String calendarToYYMMDDHHMMSS(Calendar calender) {
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat formatter = new SimpleDateFormat(FORMAT_YYYY_MM_DD_HH_MM_SS);
         return String.valueOf(formatter.format(calender.getTime()));
     }
     
     public static String convetStringDateTimetoDateStringFormat1(String date){
-        return calendarToYYMMDDHHMMSS(stringToCalendar1(date));
+        Calendar calendar = stringToCalendar1(date);
+        if(calendar!=null){
+            return calendarToYYMMDDHHMMSS(calendar);
+        }
+        return null;
     }
 
     
-     public static Calendar stringToCalendar1(String str_date) {
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+     public static Calendar stringToCalendar1(String strDate) {
+        SimpleDateFormat formatter = new SimpleDateFormat(FORMAT_YYYY_MM_DD_HH_MM_SS);
         try {
-            Date date1 = (Date) formatter.parse(str_date);
+            Date date1 = formatter.parse(strDate);
             Calendar cal = Calendar.getInstance();
             Calendar ca2 = Calendar.getInstance();
             cal.setTime(date1);
@@ -78,6 +100,7 @@ public class DateTimeConversion {
             ca2.set(Calendar.SECOND, cal.get(Calendar.SECOND));
             return ca2;
         } catch (ParseException ex) {
+            log.error("Error in stringToCalendar1...");
         }
         return null;
     }

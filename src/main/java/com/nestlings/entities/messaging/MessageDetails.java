@@ -2,12 +2,14 @@ package com.nestlings.entities.messaging;
 
 import com.nestlings.entities.utils.NestlingUtils;
 import com.nestlings.member.MemberInfo;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor
+@AllArgsConstructor
 public class MessageDetails {
 
     private Integer messageId;
@@ -151,19 +153,4 @@ public class MessageDetails {
         this.messageReplyId = messageReplyId;
     }
 
-    public MessageDetails(Integer messageId, Integer messageReplyId, Integer createdBy, String createdByName, List<MemberInfo> toMembers, String contentTypeTag, Integer contentTypeId, String content, String expireDate, String createdDate, String toMembersDisplay, Integer securityRoleId, List<MessageReplyDetails> messageReplies) {
-        this.messageId = messageId;
-        this.messageReplyId = messageReplyId;
-        this.createdBy = createdBy;
-        this.createdByName = createdByName;
-        this.toMembers = toMembers;
-        this.contentTypeTag = contentTypeTag;
-        this.contentTypeId = contentTypeId;
-        this.content = content;
-        this.expireDate = expireDate;
-        this.createdDate = createdDate;
-        this.toMembersDisplay = toMembersDisplay;
-        this.securityRoleId = securityRoleId;
-        this.messageReplies = messageReplies;
-    }
 }
