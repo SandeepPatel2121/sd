@@ -70,7 +70,7 @@ public class AmazonClient {
             uploadFileTos3bucket(key, file);
             Files.delete(Paths.get(file.getPath()));
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("Exception error for upload file ",e);
         }
         return fileUrl;
     }

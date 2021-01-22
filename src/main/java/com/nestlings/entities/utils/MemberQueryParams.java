@@ -20,10 +20,10 @@ public enum MemberQueryParams {
     POST_TYPE("postType"),
     POST_DESCRIPTION("postDescription"),
     SENDER_ID("senderId"),
-	FACEBOOK_ID("faceBookID"),
-	GOOGLE_ID("googleID"),
-	STATUS_ID("statusId"),
-	AMBITION("ambition");
+    FACEBOOK_ID("faceBookID"),
+    GOOGLE_ID("googleID"),
+    STATUS_ID("statusId"),
+    AMBITION("ambition");
 
     private final String name;
     MemberQueryParams(final String name) {

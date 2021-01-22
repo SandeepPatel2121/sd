@@ -1,6 +1,5 @@
 package com.nestlings.entities.utils;
 
-import com.nestlings.member.MemberInfo;
 
 import java.time.DateTimeException;
 import java.time.LocalDateTime;
@@ -11,8 +10,6 @@ public class NestlingUtils {
 
     private NestlingUtils(){}
 
-    public static final List<NotificationType> emailSenderExcludeUserActions = new ArrayList<>();
-
     public static final DateTimeFormatter TIMESTAMP_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.S");
 
     public static final DateTimeFormatter YYYY_MM_DD_HHMM_FORAMT = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
@@ -22,11 +19,7 @@ public class NestlingUtils {
     public static final DateTimeFormatter DAY_FULLMONTH_YEAR_TIME_FORMAT = DateTimeFormatter.ofPattern("dd MMMM yyyy hh:mm");
 
     private static final Map<Integer, String> universityApplicationStatuses = new HashMap<>();
-
-    public static final List<String> defaultUsernames = new ArrayList<>();
-
-    public static final List<MemberInfo> defaultUsers = new ArrayList<>();
-
+    
     public static final String UNIVERSITY_APPLICATION_APPLICATION_SENT = "APPLICATION_SENT";
     public static final String UNIVERSITY_APPLICATION_APPLICATION_ACCEPTED = "APPLICATION_ACCEPTED";
     public static final String UNIVERSITY_APPLICATION_APPLICATION_DENIED = "APPLICATION_DENIED";
