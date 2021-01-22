@@ -3,13 +3,17 @@ package com.nestlings.entities.utils;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Date;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Objects;
 import javax.annotation.PostConstruct;
 
 import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
-import com.amazonaws.services.s3.AmazonS3Client;
+import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -37,20 +41,18 @@ public class AmazonClient {
     @PostConstruct
     public void initializeAmazon() {
         AWSCredentials credentials = new BasicAWSCredentials(this.accessKey, this.secretKey);
-        this.s3client = new AmazonS3Client(credentials);
+        this.s3client = AmazonS3ClientBuilder.standard().withRegion(Regions.US_EAST_2)
+                .withCredentials(new AWSStaticCredentialsProvider(credentials)).build();
     }
 
     private File convertMultiPartToFile(MultipartFile file) throws IOException {
-        File convFile = new File(file.getOriginalFilename());
-        FileOutputStream fos = new FileOutputStream(convFile);
-        fos.write(file.getBytes());
-        fos.close();
+        File convFile = new File(Objects.requireNonNull(file.getOriginalFilename()));
+        try(FileOutputStream fos = new FileOutputStream(convFile)){
+            fos.write(file.getBytes());
+        }
         return convFile;
     }
 
-    private String generateFileName(MultipartFile multiPart, Long id) {
-        return "" + id + "_com_" + new Date().getTime() + "-" + multiPart.getOriginalFilename().replace(" ", "_").replace("::", "_");
-    }
 
     private void uploadFileTos3bucket(String fileName, File file) {
         s3client.putObject(new PutObjectRequest(bucketName, fileName, file));
@@ -66,7 +68,7 @@ public class AmazonClient {
             key = keyName + System.currentTimeMillis() + multipartFile.getOriginalFilename();
             fileUrl = endpointUrl + "/" + key;
             uploadFileTos3bucket(key, file);
-            file.delete();
+            Files.delete(Paths.get(file.getPath()));
         } catch (Exception e) {
             e.printStackTrace();
         }

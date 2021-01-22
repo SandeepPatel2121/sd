@@ -5,16 +5,21 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.Cipher;
+import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESedeKeySpec;
+import java.io.UnsupportedEncodingException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 import java.util.Base64;
 
 @Component
 public class NestlingsCryptoUtil {
 
-    private final Logger LOGGER = LoggerFactory.getLogger(NestlingsCryptoUtil.class);
+    private final Logger logger = LoggerFactory.getLogger(NestlingsCryptoUtil.class);
 
     private static final String UNICODE_FORMAT = "UTF8";
     public static final String DESEDE_ENCRYPTION_SCHEME = "DESede";
@@ -26,7 +31,7 @@ public class NestlingsCryptoUtil {
     private String arEncryptionScheme;
     SecretKey key;
 
-    public NestlingsCryptoUtil() throws Exception {
+    public NestlingsCryptoUtil() throws UnsupportedEncodingException, NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeySpecException, InvalidKeyException {
         arEncryptionKey = "1yektercesotpyrcsgniltsen";
         arEncryptionScheme = DESEDE_ENCRYPTION_SCHEME;
         arrayBytes = arEncryptionKey.getBytes(UNICODE_FORMAT);
@@ -44,7 +49,7 @@ public class NestlingsCryptoUtil {
             byte[] encryptedText = cipher.doFinal(plainText);
             encryptedString = new String(Base64.getEncoder().encode(encryptedText));
         } catch (Exception e) {
-            LOGGER.error(e.getMessage(), e);
+            logger.error(e.getMessage(), e);
         }
         return encryptedString;
     }
@@ -57,7 +62,7 @@ public class NestlingsCryptoUtil {
             byte[] plainText = cipher.doFinal(encryptedText);
             decryptedText = new String(plainText);
         } catch (Exception e) {
-            LOGGER.error("Unable to decrypt your string.");
+            logger.error("Unable to decrypt your string.");
             //throw new EncryptedTokenNotValidExcepton("Unable to decrypt your string.");
         }
         return decryptedText;

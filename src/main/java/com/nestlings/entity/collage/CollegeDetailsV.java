@@ -14,7 +14,7 @@ import lombok.Setter;
 @Getter
 public class CollegeDetailsV {
     
-    private final String NO_DATA = "No Data";
+    private static final String NO_DATA = "No Data";
     private Integer collegeDetailsId;
     private Integer unitId;
     private String collegeName;

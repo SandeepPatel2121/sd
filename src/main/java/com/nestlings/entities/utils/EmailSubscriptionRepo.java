@@ -20,7 +20,7 @@ import java.util.List;
 @Component
 public class EmailSubscriptionRepo {
 
-    private final Logger LOGGER = LoggerFactory.getLogger(EmailSubscriptionRepo.class);
+    private final Logger logger = LoggerFactory.getLogger(EmailSubscriptionRepo.class);
 
     private Map<String, EmailSubscriptionDetails> emailSubscriptionDetailsMap;
 
@@ -28,14 +28,13 @@ public class EmailSubscriptionRepo {
     private NestlingsCryptoUtil nestlingsCryptoUtil;
 
     public EmailSubscriptionRepo() {
-        this.emailSubscriptionDetailsMap = new HashMap();
+        this.emailSubscriptionDetailsMap = new HashMap<>();
     }
 
     public void setEmailSubscriptionDetails(List<EmailSubscriptionDetails> emailSubscriptions) {
         if (emailSubscriptions != null && !emailSubscriptions.isEmpty()) {
-            emailSubscriptions.stream().forEach((emailSubscription) -> {
-                setEmailSubscriptionDetails(emailSubscription);
-            });
+            emailSubscriptions.forEach(emailSubscription -> setEmailSubscriptionDetails(emailSubscription)
+            );
         }
     }
 
@@ -62,7 +61,7 @@ public class EmailSubscriptionRepo {
                 subscribed = false;
             }
         } catch (Exception e) {
-            LOGGER.error(e.getMessage(), e);
+            logger.error(e.getMessage(), e);
         }
         return subscribed;
     }
@@ -78,8 +77,7 @@ public class EmailSubscriptionRepo {
             emailSubscriptionDetails
                     = this.getEmailSubscriptionDetailsByUserEmail(email);
         } catch (Exception e) {
-            LOGGER.error(e.getMessage(), e);
-            //throw new NestlingsException(NestlingsExceptionType.RUNTIME_EXCEPTION, e.getMessage());
+            throw new NestlingsException(NestlingsExceptionType.RUNTIME_EXCEPTION, e.getMessage());
         }
         return emailSubscriptionDetails;
 
@@ -90,8 +88,7 @@ public class EmailSubscriptionRepo {
         try {
             decryptedEmail = nestlingsCryptoUtil.decrypt(encryptedEmail);
         } catch (Exception e) {
-            LOGGER.error(e.getMessage(), e);
-            //throw new NestlingsException(NestlingsExceptionType.RUNTIME_EXCEPTION, e.getMessage());
+            throw new NestlingsException(NestlingsExceptionType.RUNTIME_EXCEPTION, e.getMessage());
         }
         return decryptedEmail;
     }
@@ -101,8 +98,7 @@ public class EmailSubscriptionRepo {
         try {
             decryptedEmail = nestlingsCryptoUtil.encrypt(emailId);
         } catch (Exception e) {
-            LOGGER.error(e.getMessage(), e);
-            //throw new NestlingsException(NestlingsExceptionType.RUNTIME_EXCEPTION, e.getMessage());
+            throw new NestlingsException(NestlingsExceptionType.RUNTIME_EXCEPTION, e.getMessage());
         }
         return decryptedEmail;
     }

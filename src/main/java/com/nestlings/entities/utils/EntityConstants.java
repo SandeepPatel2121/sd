@@ -6,6 +6,8 @@ package com.nestlings.entities.utils;
  */
 public class EntityConstants {
 
+    private EntityConstants(){}
+
     public static final String USER_CODE_PREFIX = "U";
     public static final String LOGGED_IN_USER = "loggedInUser";
 

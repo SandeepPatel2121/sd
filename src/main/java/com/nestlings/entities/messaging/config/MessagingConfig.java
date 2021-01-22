@@ -42,13 +42,13 @@ public class MessagingConfig {
     private String password;
 
     @Value("${spring.rabbitmq.address.url}")
-    private String rabbit_url;
+    private String rabbitUrl;
 
     @Bean
     public ConnectionFactory connectionFactory() {
         CachingConnectionFactory connectionFactory = new CachingConnectionFactory();
 
-        connectionFactory.setUri(URI.create(rabbit_url));
+        connectionFactory.setUri(URI.create(rabbitUrl));
         connectionFactory.setUsername(username);
         connectionFactory.setPassword(password);
 

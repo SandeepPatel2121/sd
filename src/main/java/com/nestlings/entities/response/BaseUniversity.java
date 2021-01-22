@@ -62,7 +62,7 @@ public class BaseUniversity {
     }
 
     public String getSearchString() {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         if(this.getCollegeName() != null) {
             sb.append(getCollegeName().toLowerCase());
         }

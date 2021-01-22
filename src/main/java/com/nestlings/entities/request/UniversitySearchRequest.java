@@ -120,24 +120,11 @@ public class UniversitySearchRequest {
     }
 
     public boolean hasDegreeCriteria() {
-        if(isAssociates()) {
-            return true;
-        } else if(isBachelors()) {
-            return true;
-        } else if(isDoctoral()) {
-            return true;
-        } else if(isGraduate()) {
-            return true;
-        } else if(isMasters()) {
-            return true;
-        } else if(isProfessional()) {
-            return true;
-        } else if(isUndergraduate()) {
-            return true;
-        } else {
-            return false;
+        boolean success =false;
+        if(isAssociates() ||isBachelors() || isDoctoral() || isGraduate() || isMasters() || isProfessional() || isUndergraduate() ) {
+            success= true;
         }
-
+        return success;
     }
 
     public String getFromModule() {
