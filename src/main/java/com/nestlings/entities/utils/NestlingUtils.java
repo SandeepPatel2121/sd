@@ -20,6 +20,8 @@ public class NestlingUtils {
 
     private static final Map<Integer, String> universityApplicationStatuses = new HashMap<>();
     
+    public static final List<NotificationType> emailSenderExcludeUserActions = new ArrayList();
+    
     public static final String UNIVERSITY_APPLICATION_APPLICATION_SENT = "APPLICATION_SENT";
     public static final String UNIVERSITY_APPLICATION_APPLICATION_ACCEPTED = "APPLICATION_ACCEPTED";
     public static final String UNIVERSITY_APPLICATION_APPLICATION_DENIED = "APPLICATION_DENIED";
