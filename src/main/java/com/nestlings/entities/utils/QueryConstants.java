@@ -4,6 +4,7 @@ public class QueryConstants {
 
     public static final String MAP_NEEDS_CONCAT = "needsConcat";
     public static final String MAP_QUERY = "query";
+    public static final String APPLICATION_JSON = "application/json";
 
     private QueryConstants(){}
 
