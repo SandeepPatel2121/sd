@@ -33,6 +33,13 @@ public class EntityConstants {
     public static final String MESSAGING_COMMON_ROUTING = "common";
     public static final String MESSAGING_NOTIFICATION_ROUTING = "notification";
     
+      /*
+     * WebSecurityConfig
+     */
+    
+    public static final String STUDENT = "STUDENT";
+     public static final String COLLEGE = "COLLEGE";
+
     /*
      * EMAIL
      */
@@ -47,6 +54,19 @@ public class EntityConstants {
      */
         
     public static final String USER_ID = "userId";
+     public static final String EMAIL_ID = "emailID";
+    public static final String FRIENDID = "friendId";
+    
+    /*
+     * DEVICE_TOKEN
+     */
+    public static final String USERDEVICEID = "userDeviceID";
+    public static final String TOKEN = "token";
+    public static final String VERSION = "version";
+    public static final String DEVICENAME = "deviceName";
+    public static final String DEVICETYPE = "deviceType";
+    public static final String USERID = "userID";
+
 
     /*
      * SCORE
