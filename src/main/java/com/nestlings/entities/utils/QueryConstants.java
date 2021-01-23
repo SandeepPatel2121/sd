@@ -56,6 +56,13 @@ public class QueryConstants {
     public static final String RECEIPT_NUMBER = "receiptNumber";
     public static final String REFUNDS_URL = "refundsUrl";
     public static final String SOURCE = "source";
+    public static final String MSG_PLEASE_ENTER_FRIEND_USER_ID = "Please Enter Friend User Id";
+    public static final String FRIEND_USER_ID = "friendUserId";
+    public static final String FRIEND_ID = "friendId";
+    public static final String OR_LOWER_U_LAST_NAME_LIKE = "or lower(u.lastName) like '%";
+    public static final String OR_LOWER_CONCAT_U_FIRST_NAME_U_LAST_NAME_LIKE = "or lower(concat(u.firstName,' ',u.lastName)) like '%";
+    public static final String OR_LOWER_CONCAT_U_LAST_NAME_U_FIRST_NAME_LIKE = "or lower(concat(u.lastName,' ',u.firstName)) like '%";
+    public static final String AND_LOWER_U_FIRST_NAME_LIKE = " AND (lower(u.firstName) like '%";
 
     /**
      * Messages Constants
