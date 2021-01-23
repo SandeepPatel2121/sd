@@ -1,6 +1,9 @@
 package com.nestlings.entities.utils;
 
 
+import com.nestlings.entities.response.member.Notification;
+import com.nestlings.user.device.UserDeviceModel;
+
 import java.time.DateTimeException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -82,5 +85,13 @@ public class NestlingUtils {
             }
         }
         return statusId;
+    }
+
+    public static boolean hasDeviceModels(List<UserDeviceModel> deviceModels) {
+        return (deviceModels != null && !deviceModels.isEmpty());
+    }
+
+    public static boolean hasNotification(Notification notification) {
+        return !Objects.isNull(notification);
     }
 }
