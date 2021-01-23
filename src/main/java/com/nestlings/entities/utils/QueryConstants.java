@@ -2,6 +2,9 @@ package com.nestlings.entities.utils;
 
 public class QueryConstants {
 
+    public static final String MAP_NEEDS_CONCAT = "needsConcat";
+    public static final String MAP_QUERY = "query";
+
     private QueryConstants(){}
 
     public static final String USER_ID = "userId";

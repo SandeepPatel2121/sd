@@ -3,6 +3,7 @@ package com.nestlings.entities.utils;
 
 import com.nestlings.entities.response.member.Notification;
 import com.nestlings.user.device.UserDeviceModel;
+import org.springframework.util.StringUtils;
 
 import java.time.DateTimeException;
 import java.time.LocalDateTime;
@@ -91,5 +92,21 @@ public class NestlingUtils {
 
     public static boolean hasNotification(Notification notification) {
         return !Objects.isNull(notification);
+    }
+
+    public static boolean hasUniversityName(String universityName){
+        return (!universityName.isEmpty()) && StringUtils.hasText(universityName);
+    }
+
+    public static boolean hasField(String field){
+        return field!=null && !field.isEmpty();
+    }
+
+    public static boolean hasRequestPrograms(String requestPrograms){
+        return (!requestPrograms.isEmpty()) && StringUtils.hasText(requestPrograms);
+    }
+
+    public static boolean hasCountryName(String countryName){
+        return (!countryName.isEmpty()) && StringUtils.hasText(countryName);
     }
 }
