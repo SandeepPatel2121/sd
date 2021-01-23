@@ -11,7 +11,6 @@ public class QueryConstants {
     public static final String APPLICATION_ID = "applicationId";
     public static final String COLLEGE_DETAILS_ID = "collegeDetailsId";
     public static final String MESSAGE_THREAD_ID = "messageThreadId";
-    public static final String CREATED_DATE = "createdDate";
     public static final String APPLICATION_TRACK_ID = "applicationTrackId";
     public static final String MESSAGE_ID = "messageId";
     public static final String USER_TYPE = "userType";
@@ -41,4 +40,42 @@ public class QueryConstants {
     public static final String ORDER_BY = " order by ";
     public static final String DESC_SPACE = "Desc ";
     public static final String ASC_SPACE = "Asc ";
+    public static final String CREATED_DATE = "createdDate";
+    public static final String CHARGE_ID = "chargeId";
+    public static final String STATUS = "status";
+    public static final String AMOUNT = "amount";
+    public static final String DESCRIPTION = "description";
+    public static final String BALANCE_TRANSACTION = "balanceTransaction";
+    public static final String CAPTURED = "captured";
+    public static final String CREATED = "created";
+    public static final String CURRENCY = "currency";
+    public static final String OUTCOME_SELLER_MESSAGE = "outcomeSellerMessage";
+    public static final String OUTCOMETYPE = "outcometype";
+    public static final String PAID = "paid";
+    public static final String RECEIPT_EMAIL = "receiptEmail";
+    public static final String RECEIPT_NUMBER = "receiptNumber";
+    public static final String REFUNDS_URL = "refundsUrl";
+    public static final String SOURCE = "source";
+
+    /**
+     * Messages Constants
+     * */
+
+    public static final String MSG_RECORD_FOUND = "Record Found";
+    public static final String MSG_NO_RECORD_FOUND = "No Record Found";
+
+    /**
+     * Map response Constants
+     * */
+
+    public static final String MAP_PAGE = "page";
+    public static final String MAP_LIMIT = "limit";
+    public static final String MAP_DATA = "Data";
+    public static final String MAP_TOTAL_DATA = "totalData";
+    public static final String MAP_APPLICATION_DATA = "applicationData";
+
+    /**
+     * Other String Constants
+     * */
+    public static final String DELIMITER = "/";
 }
