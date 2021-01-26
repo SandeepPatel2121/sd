@@ -56,6 +56,8 @@ public class EntityConstants {
     public static final String USER_ID = "userId";
      public static final String EMAIL_ID = "emailID";
     public static final String FRIENDID = "friendId";
+    public static final String FACEBOOKID = "facebookId";
+        public static final String GOOGLEID = "googleID";
     
     /*
      * DEVICE_TOKEN
