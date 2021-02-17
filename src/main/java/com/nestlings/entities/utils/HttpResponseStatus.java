@@ -19,7 +19,9 @@ public class HttpResponseStatus {
 
     public static final String EMAIL_MISSING = "failed ! user email id missing!";
 
-    public static final String GOOGLE_ID_MISSING = "failed ! user fackbook id missing!";
+    public static final String GOOGLE_ID_MISSING = "failed ! user google id missing!";
+
+    public static final String APPLE_ID_MISSING = "failed ! user apple id missing!";
     
     /**
      * Parameter Not Supplied
@@ -34,6 +36,8 @@ public class HttpResponseStatus {
     public static final String FACEBOOK_USER_NOT_FOUND = "Unique User data not found for member with facebookId";
     
     public static final String GOOGLE_USER_NOT_FOUND = "Unique User data not found for member with googleId";
+
+    public static final String APPLE_USER_NOT_FOUND = "Unique User data not found for member with appleId";
     
     public static final String SELECT_USER_TYPE = "User not selected";
     

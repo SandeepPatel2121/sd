@@ -23,7 +23,9 @@ public enum MemberQueryParams {
     FACEBOOK_ID("faceBookID"),
     GOOGLE_ID("googleID"),
     STATUS_ID("statusId"),
-    AMBITION("ambition");
+    AMBITION("ambition"),
+    APPLE_ID("appleID"),
+    PHONE_NUMBER("phoneNumber");
 
     private final String name;
     MemberQueryParams(final String name) {

@@ -13,15 +13,13 @@ import lombok.Setter;
 @Getter
 public class GPlusSignupRequest {
     
-        private String googleId;
+    private String googleId;
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String selectUserType;
-        private Integer statusId;
-        private String profileImageUrl;
-        private UserDeviceModel deviceModel;
+    private Integer statusId;
+    private String profileImageUrl;
+    private UserDeviceModel deviceModel;
 
-
-    
 }

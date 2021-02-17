@@ -1,5 +1,6 @@
 package com.nestlings.entity.user.domain;
 
+import com.nestlings.member.MemberDetails;
 import com.nestlings.user.device.UserDeviceModel;
 import lombok.Getter;
 import lombok.Setter;
