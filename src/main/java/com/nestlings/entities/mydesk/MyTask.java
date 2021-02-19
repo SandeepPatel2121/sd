@@ -22,6 +22,6 @@ public class MyTask {
    private String content;
    private String status="Pending";
    private Integer assignBy;
-   private Integer contentTypeID; 
+   private String assignByName; 
    private String favorite;
 }

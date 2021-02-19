@@ -1,5 +1,6 @@
 package com.nestlings.association;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,6 +10,7 @@ import lombok.Setter;
  */
 @Setter
 @Getter
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Score {
     
     private Integer scoreID;
@@ -17,5 +19,8 @@ public class Score {
     private Float quantitative;
     private Float writing;
     private Float total;
+    private Float listings;
+    private Float reading;
+    private Float speaking;
     
 }
