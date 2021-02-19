@@ -6,6 +6,5 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ProgramDates {
-    private Integer programStartDateId;
     private String date;
 }
