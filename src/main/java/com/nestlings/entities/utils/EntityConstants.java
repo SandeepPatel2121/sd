@@ -132,6 +132,7 @@ public class EntityConstants {
     public static final String COURSE_YEAR_PLAN="courseYearPlanning";
     public static final String PREFERED_SEASON="preferedSeason";
     public static final String CURRENT_DEGREE="currentDegree";
+    public static final String CURRENT_DEGREE_TYPE="currentDegreeType";
     public static final String ACADEMIC_SCORE="academicScore";
     public static final String ENGLISH_PROFICIENT_TEST_TYPE="englishProficientTestType";
     public static final String ENGLISH_PROFICIENT_TEST_SCORE="englishProficientTestScore";
