@@ -32,6 +32,8 @@ public class HttpResponseStatus {
     public static final String USER_INFO = "success ! user info registered successfully !";
 
     public static final String USER_NOT_FOUND = "User not found.";
+
+    public static final String NO_RECORD_FOUND = "No record found.";
     
     public static final String FACEBOOK_USER_NOT_FOUND = "Unique User data not found for member with facebookId";
     
