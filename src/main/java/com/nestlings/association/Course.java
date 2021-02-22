@@ -14,5 +14,6 @@ public class Course {
     private String courseName;
     private String issuedBy;
     private String courseDate;
-
+    private Float courseMark;
+    
 }
