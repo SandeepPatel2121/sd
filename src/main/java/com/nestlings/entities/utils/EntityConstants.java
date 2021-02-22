@@ -142,5 +142,7 @@ public class EntityConstants {
     public static final String ENTRANCE_TEST="entranceTest";
     public static final String ENTRANCE_TEST_SCORE="entranceTestScore";
     public static final String INTEREST_FREE_STUDY_COURSE_LIST="interestFreeStudyCounselling";
+    public static final String DEGREE_WANT_TO_ATTEND="degreeWantToAttend";
+    public static final String PROGRAM_WANT_TO_ATTEND="programWantToAttend";
     public static final String WHATSAPPNO="whatsappNumber";
 }

@@ -12,12 +12,13 @@ public class UserPreference {
     private String courseYearPlanning;
     private String preferedSeason;
     private String currentDegree;
-    private String currentDegreeType;
     private Double academicScore;
     private String englishProficientTestType;
     private Double englishProficientTestScore;
     private String entranceTest;
     private Double entranceTestScore;
     private String interestFreeStudyCounselling;
+    private String degreeWantToAttend;
+    private String programWantToAttend;
     private String whatsappNumber;
 }
