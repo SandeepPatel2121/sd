@@ -9,4 +9,5 @@ import lombok.Setter;
 public class SuggstedUniversityResponse extends BaseUniversity{
     
     private String totalApplications;
+    private boolean collegeRecommended;
   }
