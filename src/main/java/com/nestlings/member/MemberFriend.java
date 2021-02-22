@@ -3,6 +3,8 @@ package com.nestlings.member;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Map;
+
 @Getter
 @Setter
 public class MemberFriend {
@@ -11,6 +13,7 @@ public class MemberFriend {
     private String profileImageUrl;
     private String firstName;
     private String lastName;
+    private Map<String,Object> relationshipDetails;
 
     public String getDisplayName() {
         return getFirstName() + " " + getLastName();

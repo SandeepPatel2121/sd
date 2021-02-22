@@ -3,6 +3,8 @@ package com.nestlings.member;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Map;
+
 /**
  * Created by mclau on 1/5/2017.
  */
@@ -17,5 +19,6 @@ public class MemberFriendRequest {
     private String firstName;
     private String lastName;
     private String profileImageUrl;
+    private Map<String,Object> relationshipDetails;
 
 }
