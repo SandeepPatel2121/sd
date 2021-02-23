@@ -42,7 +42,7 @@ public class ApplicationUtil {
         try {
             AmazonS3 s3Client=null;
             AWSCredentials credentials = new BasicAWSCredentials(accessKey, secretKey);
-            s3Client = AmazonS3ClientBuilder.standard().withRegion(Regions.US_EAST_2).withCredentials(new AWSStaticCredentialsProvider(credentials)).build();
+            s3Client = AmazonS3ClientBuilder.standard().withRegion(Regions.US_EAST_1).withCredentials(new AWSStaticCredentialsProvider(credentials)).build();
             String keyName = "profile-images/" + filePrefix + "/" + System.currentTimeMillis() + ".jpg";
 
             // Upload a text string as a new object.

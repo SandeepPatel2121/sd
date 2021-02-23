@@ -1,8 +1,6 @@
 package com.nestlings.entities.utils;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Objects;
@@ -14,7 +12,8 @@ import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
-import com.amazonaws.services.s3.model.PutObjectRequest;
+import com.amazonaws.services.s3.model.*;
+import com.amazonaws.util.IOUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -41,7 +40,7 @@ public class AmazonClient {
     @PostConstruct
     public void initializeAmazon() {
         AWSCredentials credentials = new BasicAWSCredentials(this.accessKey, this.secretKey);
-        this.s3client = AmazonS3ClientBuilder.standard().withRegion(Regions.US_EAST_2)
+        this.s3client = AmazonS3ClientBuilder.standard().withRegion(Regions.US_EAST_1)
                 .withCredentials(new AWSStaticCredentialsProvider(credentials)).build();
     }
 
@@ -53,9 +52,48 @@ public class AmazonClient {
         return convFile;
     }
 
-
-    private void uploadFileTos3bucket(String fileName, File file) {
+    private String uploadFileTos3bucket(String fileName, File file) {
+//        PutObjectRequest putObjectRequest =new PutObjectRequest(bucketName, fileName, file);
+//        if(enablePublicReadAccess){
+//          putObjectRequest.withCannedAcl(CannedAccessControlList.PublicRead);
+//       }
+//        s3client.putObject(putObjectRequest);
         s3client.putObject(new PutObjectRequest(bucketName, fileName, file));
+        return s3client.getUrl(bucketName, fileName).toExternalForm();
+    }
+
+    public String uploadFileTos3BucketUsingByte(String key, byte[] file) {
+
+        InputStream targetStream = new ByteArrayInputStream(file);
+        ObjectMetadata objectMetadata  = new ObjectMetadata();
+        Long contentLength = Long.valueOf(file.length);
+        objectMetadata.setContentLength(contentLength);
+
+        PutObjectRequest request = new PutObjectRequest(bucketName, key, targetStream, objectMetadata)
+                .withCannedAcl(CannedAccessControlList.PublicRead);
+
+        this.s3client.putObject(request);
+
+        return this.s3client.getUrl(bucketName, key).toExternalForm();
+    }
+
+    public byte[] downloadPhoto(String key) {
+
+        S3Object s3object = this.s3client.getObject(bucketName, key);
+        S3ObjectInputStream inputStream = s3object.getObjectContent();
+        byte[] byteArray = null;
+        try {
+            byteArray = IOUtils.toByteArray(inputStream);
+        } catch (IOException e) {
+            log.error("downloadPhoto {}", e.getMessage());
+        }
+
+        return byteArray;
+    }
+
+    public void deleteFile(String key) {
+        this.s3client.deleteObject(bucketName, key);
+
     }
 
     public String uploadFile(MultipartFile multipartFile,String id,String type) {
@@ -67,12 +105,13 @@ public class AmazonClient {
             String keyName = getKeyName(type,id);
             key = keyName + System.currentTimeMillis() + multipartFile.getOriginalFilename();
             fileUrl = endpointUrl + "/" + key;
-            uploadFileTos3bucket(key, file);
+            String url = uploadFileTos3bucket(key, file);
             Files.delete(Paths.get(file.getPath()));
+            return url;
         } catch (Exception e) {
             log.error("Exception error for upload file ",e);
         }
-        return fileUrl;
+        return "No Url";
     }
 
     private String getKeyName(String type,String id){
