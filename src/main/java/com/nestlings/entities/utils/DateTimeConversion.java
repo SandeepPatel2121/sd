@@ -70,6 +70,17 @@ public class DateTimeConversion {
         }
         return null;
     }
+
+    public static String calendarToyyyyMMddHHmmss(Calendar calender) {
+        if(calender==null){
+            return null;
+        }
+        if(calender.getTime()==null){
+            return null;
+        }
+        SimpleDateFormat formatter = new SimpleDateFormat(FORMAT_YYYY_MM_DD_HH_MM_SS);
+        return String.valueOf(formatter.format(calender.getTime()));
+    }
     
      public static String calendarToYYMMDDHHMMSS(Calendar calender) {
         SimpleDateFormat formatter = new SimpleDateFormat(FORMAT_YYYY_MM_DD_HH_MM_SS);

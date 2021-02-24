@@ -1,11 +1,10 @@
 
 package com.nestlings.entities.mydesk;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.nestlings.jpa.entities.RedirectTo;
+import com.nestlings.jpa.entities.TaskStatus;
+import lombok.*;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 /**
  *
@@ -13,15 +12,28 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
  */
 @Setter
 @Getter
-@JsonInclude(Include.NON_NULL)
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class MyTask {
-    
-   private Integer taskID;
+
+   private Long taskId;
+
    private String title;
-   private String taskDate;
+
    private String content;
-   private String status="Pending";
-   private Integer assignBy;
-   private String assignByName; 
-   private String favorite;
+
+   private String dueDate;
+
+   private Long userId;
+
+   private Long assignBy;
+
+   private String assignByName;
+
+   private boolean favorite;
+
+   private TaskStatus taskStatus;
+
+   private RedirectTo redirectTo;
 }
