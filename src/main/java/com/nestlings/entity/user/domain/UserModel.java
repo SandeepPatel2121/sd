@@ -19,5 +19,6 @@ public class UserModel {
     private String authToken;
     private String role;
     private UserDeviceModel deviceModel;
+    private boolean isPreferenceSaved;
 
 }
