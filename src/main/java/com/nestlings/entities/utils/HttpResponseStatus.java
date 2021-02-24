@@ -12,7 +12,7 @@ public class HttpResponseStatus {
     * REGISTRATION
      */
     public static final String USER_REGISTERED_SUCCESS = "success ! user registered successfully !";
-    public static final String USER_ALREADY_EXIST = "failed ! user already exist with given email address !";
+    public static final String USER_ALREADY_EXIST = "failed ! user already exist with given email address !";    
     public static final String USER_FOUND_UNIQUE = "success ! user found unique !";
 
     public static final String FACEBOOK_ID_MISSING = "failed ! user facebook id missing!";
@@ -22,6 +22,8 @@ public class HttpResponseStatus {
     public static final String GOOGLE_ID_MISSING = "failed ! user google id missing!";
 
     public static final String APPLE_ID_MISSING = "failed ! user apple id missing!";
+    
+     public static final String USER_ERROR = "failed ! user register fail !";
     
     /**
      * Parameter Not Supplied
