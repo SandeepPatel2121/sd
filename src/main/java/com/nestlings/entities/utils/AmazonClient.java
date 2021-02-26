@@ -6,6 +6,7 @@ import java.nio.file.Paths;
 import java.util.Objects;
 import javax.annotation.PostConstruct;
 
+import com.amazonaws.SdkClientException;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
@@ -92,11 +93,13 @@ public class AmazonClient {
     }
 
     public void deleteFile(String key) {
-//        key = key.substring(key.indexOf("/")+1);
-//        log.info(key);
-//        this.s3client.deleteObject(new DeleteObjectRequest(bucketName,key));
-        this.s3client.deleteObject(bucketName, key);
-
+        try {
+            this.s3client.deleteObject(bucketName, key);
+        }catch (SdkClientException e){
+            log.error("Delete file error : {}",e.getMessage());
+        }catch (Exception e){
+            log.error("Delete file error : {}",e.getMessage());
+        }
     }
 
     public String uploadFile(MultipartFile multipartFile,String id,String type) {
@@ -136,6 +139,9 @@ public class AmazonClient {
                 break;
             case "toefl-score":
                 keyName = getScoreKeyName(id,"toefl");
+                break;
+            case "other-score":
+                keyName = getScoreKeyName(id,"other");
                 break;
             default:
                 keyName = "all/";

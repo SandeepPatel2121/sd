@@ -12,8 +12,8 @@ public class Course {
 
     private Integer courseId;
     private String courseName;
-    private String issuedBy;
+    //private String issuedBy;
     private String courseDate;
     private Float courseMark;
-    
+    private String certificateUrl;
 }
