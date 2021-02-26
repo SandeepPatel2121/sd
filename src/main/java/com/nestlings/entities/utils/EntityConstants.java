@@ -80,9 +80,10 @@ public class EntityConstants {
     public static final String QUANTITATIVE = "quantitative";
     public static final String WRITING = "writing";
     public static final String TOTAL = "total";
-    public static final String LISTINGS = "listings";
+    public static final String LISTENING = "listening";
     public static final String SPEAKINGS = "speaking";
     public static final String READINGS = "reading";
+    public static final String CERTIFICATEURL = "certificateUrl";
 
     /*
      * TEST_SCORE

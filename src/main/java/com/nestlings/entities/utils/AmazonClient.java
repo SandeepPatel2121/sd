@@ -92,6 +92,9 @@ public class AmazonClient {
     }
 
     public void deleteFile(String key) {
+//        key = key.substring(key.indexOf("/")+1);
+//        log.info(key);
+//        this.s3client.deleteObject(new DeleteObjectRequest(bucketName,key));
         this.s3client.deleteObject(bucketName, key);
 
     }
@@ -125,6 +128,15 @@ public class AmazonClient {
             case "user-docs":
                 keyName = getUserDocsKeyName(id);
                 break;
+            case "gre-score":
+                keyName = getScoreKeyName(id,"gre");
+                break;
+            case "ielts-score":
+                keyName = getScoreKeyName(id,"ielts");
+                break;
+            case "toefl-score":
+                keyName = getScoreKeyName(id,"toefl");
+                break;
             default:
                 keyName = "all/";
         }
@@ -137,5 +149,9 @@ public class AmazonClient {
 
     private String getUserDocsKeyName(String id){
         return "User/" + id + "/documents/";
+    }
+
+    private String getScoreKeyName(String id,String score){
+        return "User/" + id + "/documents/exam/"+score+"/";
     }
 }

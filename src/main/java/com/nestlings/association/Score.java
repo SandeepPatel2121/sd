@@ -19,8 +19,9 @@ public class Score {
     private Float quantitative;
     private Float writing;
     private Float total;
-    private Float listings;
+    private Float listening;
     private Float reading;
     private Float speaking;
+    private String certificateUrl;
     
 }
