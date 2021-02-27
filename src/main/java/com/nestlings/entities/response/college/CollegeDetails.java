@@ -39,6 +39,7 @@ public class CollegeDetails {
     private String generalUrl;
     private boolean interested;
     private String coverImageUrl;
+    private String profileImageUrl;
     private String genderAdmitted;
     private CollegeYearlyCost yearlyCost;
     private Integer collegeAdminUserId;
@@ -382,5 +383,13 @@ public class CollegeDetails {
 
     public void setAcceptanceRate(Integer acceptanceRate) {
         this.acceptanceRate = acceptanceRate;
+    }
+
+    public String getProfileImageUrl() {
+        return profileImageUrl;
+    }
+
+    public void setProfileImageUrl(String profileImageUrl) {
+        this.profileImageUrl = profileImageUrl;
     }
 }
