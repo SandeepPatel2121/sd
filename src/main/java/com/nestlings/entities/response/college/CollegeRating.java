@@ -10,13 +10,21 @@ public class CollegeRating {
     private Integer collegeDetailsId;
     private Integer totalRatings;
     private Double totalRatingAverage;
+    private Double totalRatingAverageFiveStar;
     private Integer totalVisitorRatings;
     private Double visitorRatingAverage;
+    private Double visitorRatingAverageFiveStar;
     private Integer totalAlumniRatings;
     private Double alumniRatingAverage;
+    private Double alumniRatingAverageFiveStar;
     private Integer totalRatedOneToThree;
     private Integer totalRatedFourToSix;
     private Integer totalRatedSevenPlus;
+    private Integer totalRatedOneStar;
+    private Integer totalRatedTwoStar;
+    private Integer totalRatedThreeStar;
+    private Integer totalRatedFourStar;
+    private Integer totalRatedFiveStar;
     private List<MemberUniversityRating> latestRatings;
 
     public Integer getCollegeDetailsId() {
@@ -108,5 +116,69 @@ public class CollegeRating {
 
     public void setLatestRatings(List<MemberUniversityRating> latestRatings) {
         this.latestRatings = latestRatings;
+    }
+
+    public Double getTotalRatingAverageFiveStar() {
+        return totalRatingAverageFiveStar;
+    }
+
+    public void setTotalRatingAverageFiveStar(Double totalRatingAverageFiveStar) {
+        this.totalRatingAverageFiveStar = totalRatingAverageFiveStar;
+    }
+
+    public Double getVisitorRatingAverageFiveStar() {
+        return visitorRatingAverageFiveStar;
+    }
+
+    public void setVisitorRatingAverageFiveStar(Double visitorRatingAverageFiveStar) {
+        this.visitorRatingAverageFiveStar = visitorRatingAverageFiveStar;
+    }
+
+    public Double getAlumniRatingAverageFiveStar() {
+        return alumniRatingAverageFiveStar;
+    }
+
+    public void setAlumniRatingAverageFiveStar(Double alumniRatingAverageFiveStar) {
+        this.alumniRatingAverageFiveStar = alumniRatingAverageFiveStar;
+    }
+
+    public Integer getTotalRatedOneStar() {
+        return totalRatedOneStar;
+    }
+
+    public void setTotalRatedOneStar(Integer totalRatedOneStar) {
+        this.totalRatedOneStar = totalRatedOneStar;
+    }
+
+    public Integer getTotalRatedTwoStar() {
+        return totalRatedTwoStar;
+    }
+
+    public void setTotalRatedTwoStar(Integer totalRatedTwoStar) {
+        this.totalRatedTwoStar = totalRatedTwoStar;
+    }
+
+    public Integer getTotalRatedThreeStar() {
+        return totalRatedThreeStar;
+    }
+
+    public void setTotalRatedThreeStar(Integer totalRatedThreeStar) {
+        this.totalRatedThreeStar = totalRatedThreeStar;
+    }
+
+    public Integer getTotalRatedFourStar() {
+        return totalRatedFourStar;
+    }
+
+    public void setTotalRatedFourStar(Integer totalRatedFourStar) {
+        this.totalRatedFourStar = totalRatedFourStar;
+    }
+
+    public Integer getTotalRatedFiveStar() {
+        return totalRatedFiveStar;
+    }
+
+    public void setTotalRatedFiveStar(Integer totalRatedFiveStar) {
+        this.totalRatedFiveStar = totalRatedFiveStar;
     }
 }

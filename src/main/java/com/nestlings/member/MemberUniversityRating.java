@@ -12,6 +12,7 @@ public class MemberUniversityRating {
     private String userLastName;
     private Integer collegeDetailsId;
     private Integer collegeRating;
+    private Integer collegeRatingByFiveStar;
     private String ratingDate;
     private String ratingText;
     private String profileImageUrl = "/img/prof.jpg";

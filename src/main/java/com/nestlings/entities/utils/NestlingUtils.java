@@ -5,6 +5,8 @@ import com.nestlings.entities.response.member.Notification;
 import com.nestlings.user.device.UserDeviceModel;
 import org.springframework.util.StringUtils;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.DateTimeException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -110,5 +112,13 @@ public class NestlingUtils {
 
     public static boolean hasCountryName(String countryName){
         return (!countryName.isEmpty()) && StringUtils.hasText(countryName);
+    }
+
+    public static double round(double value,int places){
+        if(places<0) throw  new IllegalArgumentException();
+
+        BigDecimal decimal = new BigDecimal(Double.toString(value));
+        decimal = decimal.setScale(places, RoundingMode.HALF_UP);
+        return decimal.doubleValue();
     }
 }
