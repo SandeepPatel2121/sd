@@ -82,7 +82,10 @@ public class QueryConstants {
     public static final String MAP_PAGE = "page";
     public static final String MAP_LIMIT = "limit";
     public static final String MAP_DATA = "Data";
+    public static final String MAP_NOTIFICATIONS_DATA = "notificationsData";
     public static final String MAP_TOTAL_DATA = "totalData";
+    public static final String MAP_TOTAL_NOTIFICATION = "totalNotifications";
+    public static final String MAP_TOTAL_UNREAD_NOTIFICATION = "totalUnreadNotifications";
     public static final String MAP_APPLICATION_DATA = "applicationData";
 
     /**
