@@ -12,6 +12,7 @@ import lombok.Setter;
 public class ApplicationTrackData {
     private Integer createdBy;
     private String content;
+    private String message;
     private String createdDate;
     private Integer applicationStatusId;
     private Integer collegeDetailsId;
