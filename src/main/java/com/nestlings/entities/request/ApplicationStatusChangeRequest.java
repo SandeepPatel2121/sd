@@ -18,6 +18,7 @@ public class ApplicationStatusChangeRequest {
     private Integer messageThreadId;
     private Integer collegeAdminUserId;
     private String message;
+    private String comment;
     private long applicationTrackId;
     private String contentType="APPLICATION_CONTENT";
 
