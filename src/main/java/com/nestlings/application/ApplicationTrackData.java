@@ -1,4 +1,4 @@
-package com.nestlings.entities.response;
+package com.nestlings.application;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,10 +10,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ApplicationTrackData {
-    private Integer createdBy;
+
     private String content;
     private String message;
-    private String createdDate;
+    private Integer createdBy;
     private Integer applicationStatusId;
-    private Integer collegeDetailsId;
+    private Long applicationTrackId;
 }

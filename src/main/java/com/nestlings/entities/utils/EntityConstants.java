@@ -140,10 +140,26 @@ public class EntityConstants {
     public static final String ACADEMIC_SCORE="academicScore";
     public static final String ENGLISH_PROFICIENT_TEST_TYPE="englishProficientTestType";
     public static final String ENGLISH_PROFICIENT_TEST_SCORE="englishProficientTestScore";
+    public static final String ENGLISH_PROFICIENT_TEST_WRITING="englishProficientTestWriting";
+    public static final String ENGLISH_PROFICIENT_TEST_SPEAKING="englishProficientTestSpeaking";
+    public static final String ENGLISH_PROFICIENT_TEST_READING="englishProficientTestReading";
+    public static final String ENGLISH_PROFICIENT_TEST_LISTENING="englishProficientTestListening";
     public static final String ENTRANCE_TEST="entranceTest";
     public static final String ENTRANCE_TEST_SCORE="entranceTestScore";
+    public static final String ENTRANCE_TEST_VERBAL="entranceTestVerbal";
+    public static final String ENTRANCE_TEST_QUANTITIVE="entranceTestQuantitive";
+    public static final String ENTRANCE_TEST_WRITING="entranceTestWriting";
+    public static final String ENTRANCE_TEST_EXAM_DATE="entranceTestExamDate";
     public static final String INTEREST_FREE_STUDY_COURSE_LIST="interestFreeStudyCounselling";
     public static final String DEGREE_WANT_TO_ATTEND="degreeWantToAttend";
     public static final String PROGRAM_WANT_TO_ATTEND="programWantToAttend";
     public static final String WHATSAPPNO="whatsappNumber";
+    public static final String TUTIONBUDGET="tutionBugdet";
+
+
+    public static final String ATTACHMENT_TYPE="attachmentType";
+    public static final String ATTACHMENT_ID="attachmentId";
+    public static final String CREATEDBY="createdBy";
+    public static final String UPDATEDBY="updatedBy";
+    public static final String INSTITUTIONID="institutionId";
 }

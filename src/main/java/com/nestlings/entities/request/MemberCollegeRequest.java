@@ -11,7 +11,8 @@ import lombok.Setter;
 @Setter
 @Getter
 public class MemberCollegeRequest {
-    
+
+    private Integer userInstitutionId;
     private String collegeDetailsId;
     private String collegeName;
     private String collegeType;

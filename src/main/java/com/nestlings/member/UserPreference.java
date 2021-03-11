@@ -19,10 +19,19 @@ public class UserPreference {
     private Double academicScore=0.0d;
     private String englishProficientTestType="";
     private Double englishProficientTestScore=0.0d;
+    private Double englishProficientTestWriting=0.0d;
+    private Double englishProficientTestSpeaking=0.0d;
+    private Double englishProficientTestReading=0.0d;
+    private Double englishProficientTestListening=0.0d;
     private String entranceTest="";
     private Double entranceTestScore=0.0d;
+    private Double entranceTestVerbal=0.0d;
+    private Double entranceTestQuantitive=0.0d;
+    private Double entranceTestWriting=0.0d;
+    private String entranceTestExamDate="";
     private String interestFreeStudyCounselling="";
     private String degreeWantToAttend="";
     private String programWantToAttend="";
     private String whatsappNumber="";
+    private Double tutionBugdet=0.0d;
 }

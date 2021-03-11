@@ -9,6 +9,7 @@ public class SendNoConnectionMessageRequest {
 
     private Integer userId;
     private String message;
+    private String comment;
 
 }
 

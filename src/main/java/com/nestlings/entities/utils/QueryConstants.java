@@ -16,6 +16,8 @@ public class QueryConstants {
     public static final String COLLEGE_DETAILS_ID = "collegeDetailsId";
     public static final String MESSAGE_THREAD_ID = "messageThreadId";
     public static final String APPLICATION_TRACK_ID = "applicationTrackId";
+    public static final String LASTSTEP = "lastStep";
+    public static final String TOTALSTEP = "totalStep";
     public static final String MESSAGE_ID = "messageId";
     public static final String USER_TYPE = "userType";
     public static final String RATINGS = "ratings";

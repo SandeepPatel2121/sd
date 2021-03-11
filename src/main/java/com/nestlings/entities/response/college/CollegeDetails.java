@@ -5,9 +5,6 @@ import com.nestlings.association.Address;
 import java.math.BigDecimal;
 import java.util.List;
 
-/**
- * Created by mclau on 12/12/2016.
- */
 public class CollegeDetails {
 
     private static final String NO_DATA = "No Data";
@@ -21,7 +18,7 @@ public class CollegeDetails {
     private Integer noOfStudents;
     private String selectivity ;
     private boolean courseCatalogue;
-    private String religiousAffiliation ;
+    private String religiousAffiliation;
     private String tuitionFees;
     private Integer costToStudents;
     private String specialAffinity;

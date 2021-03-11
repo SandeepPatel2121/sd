@@ -16,6 +16,7 @@ public class BaseUniversity {
     private String collegeName;
     private String imageUrl = "";
     private Integer userRating;
+    private Double userRatingFiveStar;
     
     @Getter(AccessLevel.NONE)
     private String location;

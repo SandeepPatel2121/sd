@@ -109,7 +109,7 @@ public class AmazonClient {
         try {
             File file = convertMultiPartToFile(multipartFile);
             String keyName = getKeyName(type,id);
-            key = keyName + System.currentTimeMillis() + multipartFile.getOriginalFilename();
+            key = keyName + System.currentTimeMillis()+ "/" + multipartFile.getOriginalFilename();
             fileUrl = endpointUrl + "/" + key;
             String url = uploadFileTos3bucket(key, file);
             Files.delete(Paths.get(file.getPath()));
@@ -143,6 +143,9 @@ public class AmazonClient {
             case "other-score":
                 keyName = getScoreKeyName(id,"other");
                 break;
+            case "user-essay":
+                keyName = getUserEssayDocsKeyName(id);
+                break;
             default:
                 keyName = "all/";
         }
@@ -155,6 +158,10 @@ public class AmazonClient {
 
     private String getUserDocsKeyName(String id){
         return "User/" + id + "/documents/";
+    }
+
+    private String getUserEssayDocsKeyName(String id){
+        return "User/" + id + "/documents/essay/";
     }
 
     private String getScoreKeyName(String id,String score){

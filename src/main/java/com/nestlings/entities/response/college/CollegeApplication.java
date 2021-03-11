@@ -3,6 +3,7 @@ package com.nestlings.entities.response.college;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.nestlings.application.Field;
 import com.nestlings.application.Step;
 import com.nestlings.entities.messaging.SendMessageRequest;
 import com.nestlings.entities.utils.NestlingUtils;
@@ -18,9 +19,10 @@ public class CollegeApplication {
     private Integer userId;
     private Integer statusId;
     private List<Step> stepsList;
+
     @JsonIgnore
     private String applicationData;
-    @JsonIgnore
+
     private String firstName;
     private String lastName;
     private MemberInfo memberInfo;
@@ -32,6 +34,10 @@ public class CollegeApplication {
 
     private String profileImageUrl;
     private long applicationTrackId;
+
+    private Integer lastStep;
+
+    private Integer totalStep;
 
     public Integer getApplicationId() {
         return applicationId;
@@ -163,6 +169,40 @@ public class CollegeApplication {
 
     public void setApplicationTrackId(long applicationTrackId) {
         this.applicationTrackId = applicationTrackId;
+    }
+
+    public Integer getLastStep() {
+        int stepCount = 1;
+        if(stepsList != null){
+            for(Step step:stepsList){
+                for(Field field:step.getFieldList()){
+                    if(field.getRequired().equalsIgnoreCase("YES")){
+                        if(field.getFieldvalue()==null || field.getFieldvalue().isEmpty()){
+                            return stepCount;
+                        }
+                    }
+                }
+                if(stepCount<stepsList.size()){
+                    stepCount++;
+                }
+            }
+        }
+        return stepCount;
+    }
+
+    public void setLastStep(Integer lastStep) {
+        this.lastStep = lastStep;
+    }
+
+    public Integer getTotalStep() {
+        if(stepsList != null){
+            return stepsList.size();
+        }
+        return null;
+    }
+
+    public void setTotalStep(Integer totalStep) {
+        this.totalStep = totalStep;
     }
 }
 

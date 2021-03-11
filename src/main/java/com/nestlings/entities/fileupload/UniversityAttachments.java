@@ -1,5 +1,6 @@
 package com.nestlings.entities.fileupload;
 
+import com.nestlings.entities.enums.AttachmentType;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -20,6 +21,12 @@ public class UniversityAttachments{
     private String fileName;
 
     private Integer collegeDetailsId;
+
+    private Integer userId;
+
+    private AttachmentType attachmentType;
+
+    private Integer institutionId;
 
     private Integer createdBy;
 
