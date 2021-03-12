@@ -6,9 +6,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-/**
- * Created by mclau on 12/3/2016.
- */
 @Setter
 @Getter
 public class MemberWork extends Company {

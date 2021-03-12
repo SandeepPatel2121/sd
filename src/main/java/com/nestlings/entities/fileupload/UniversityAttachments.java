@@ -28,6 +28,8 @@ public class UniversityAttachments{
 
     private Integer institutionId;
 
+    private Integer recommendationId;
+
     private Integer createdBy;
 
     private String createdAt;

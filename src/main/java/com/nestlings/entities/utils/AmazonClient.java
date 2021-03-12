@@ -146,6 +146,9 @@ public class AmazonClient {
             case "user-essay":
                 keyName = getUserEssayDocsKeyName(id);
                 break;
+            case "user-recommendation":
+                keyName = getUserRecommendationsDocsKeyName(id);
+                break;
             default:
                 keyName = "all/";
         }
@@ -162,6 +165,10 @@ public class AmazonClient {
 
     private String getUserEssayDocsKeyName(String id){
         return "User/" + id + "/documents/essay/";
+    }
+
+    private String getUserRecommendationsDocsKeyName(String id){
+        return "User/" + id + "/documents/recommendations/";
     }
 
     private String getScoreKeyName(String id,String score){

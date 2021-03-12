@@ -117,6 +117,25 @@ public class EntityConstants {
     public static final String P_ENDDATE = "p_endDate";
     public static final String P_COMPANYDESCRIPTION = "p_companyDescription";
 
+    public static final String USER_WORK_ID = "userWorkId";
+    public static final String USER_WORK_ID_CAP = "userWorkID";
+    public static final String COMPANY_NAME = "companyName";
+    public static final String DESCRIPTION = "description";
+    public static final String CREATED_DATE = "createdDate";
+    public static final String COMPANY_ID = "companyId";
+    public static final String ADDRESS1 = "address1";
+    public static final String ADDRESS2 = "address2";
+    public static final String START_DATE = "startDate";
+    public static final String END_DATE = "endDate";
+    public static final String UPDATED_DATE = "updatedDate";
+    public static final String COURSE = "course";
+
+
+
+
+
+
+
     /*
      * CHECKLIST
      */
@@ -162,4 +181,5 @@ public class EntityConstants {
     public static final String CREATEDBY="createdBy";
     public static final String UPDATEDBY="updatedBy";
     public static final String INSTITUTIONID="institutionId";
+    public static final String RECOMMENDATIONID="recommendationId";
 }
