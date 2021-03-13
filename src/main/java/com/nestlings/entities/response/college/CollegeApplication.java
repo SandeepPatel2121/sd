@@ -30,6 +30,8 @@ public class CollegeApplication {
     private String updatedDate;
     private Integer messageThreadId;
     private Integer collegeAdminUserId;
+
+    @JsonIgnore
     private SendMessageRequest messageRequest;
 
     private String profileImageUrl;
@@ -171,38 +173,63 @@ public class CollegeApplication {
         this.applicationTrackId = applicationTrackId;
     }
 
-    public Integer getLastStep() {
-        int stepCount = 1;
-        if(stepsList != null){
-            for(Step step:stepsList){
-                for(Field field:step.getFieldList()){
-                    if(field.getRequired().equalsIgnoreCase("YES")){
-                        if(field.getFieldvalue()==null || field.getFieldvalue().isEmpty()){
-                            return stepCount;
-                        }
-                    }
-                }
-                if(stepCount<stepsList.size()){
-                    stepCount++;
-                }
-            }
-        }
-        return stepCount;
-    }
+//    public Integer getLastStep() {
+//        int stepCount = 1;
+//        if(stepsList != null){
+//            for(Step step:stepsList){
+//                for(Field field:step.getFieldList()){
+//                    if(field.getRequired().equalsIgnoreCase("YES")){
+//                        if(field.getFieldvalue()==null || field.getFieldvalue().isEmpty()){
+//                            return stepCount;
+//                        }
+//                    }
+//                }
+//                if(stepCount<stepsList.size()){
+//                    stepCount++;
+//                }
+//            }
+//        }
+//        return stepCount;
+//    }
 
     public void setLastStep(Integer lastStep) {
         this.lastStep = lastStep;
     }
 
-    public Integer getTotalStep() {
-        if(stepsList != null){
-            return stepsList.size();
-        }
-        return null;
-    }
+//    public Integer getTotalStep() {
+//        if(stepsList != null){
+//            return stepsList.size();
+//        }
+//        return null;
+//    }
 
     public void setTotalStep(Integer totalStep) {
         this.totalStep = totalStep;
+    }
+
+
+    public Integer getLastStep() {
+        return lastStep;
+    }
+
+    public Integer getTotalStep() {
+        return totalStep;
+    }
+
+    public boolean validateApplicationData(){
+        if(stepsList != null){
+            for(Step step:stepsList){
+                for(Field field:step.getFieldList()){
+                    if(field.getRequired().equalsIgnoreCase("YES")){
+                        if(field.getFieldvalue()==null || field.getFieldvalue().isEmpty()){
+                            return false;
+                        }
+                    }
+                }
+            }
+            return true;
+        }
+        return false;
     }
 }
 

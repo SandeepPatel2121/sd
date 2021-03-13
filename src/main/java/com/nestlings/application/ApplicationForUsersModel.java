@@ -15,41 +15,44 @@ public class ApplicationForUsersModel {
     private String collegeName;
     private Integer collegeStatusId;
 
-    @JsonIgnore
-    private Address address;
+//    @JsonIgnore
+//    private Address address;
 
     private String coverImageUrl;
-    private Integer applicationStatus;
+    private Integer applicationStatusId;
     private String applicationStatusValue;
-    private Integer messageThreadId;
+//    private Integer messageThreadId;
     private Long applicationTrackId;
     private String createdDate;
     private String updatedDate;
-
-    @Getter(AccessLevel.NONE)
-    private String location;
-
-    public String getLocation() {
-        StringBuilder sb = new StringBuilder();
-        if(address.getStreetName() != null) {
-            sb.append(address.getStreetName());
-        }
-        if(address.getCity() != null) {
-            sb.append(", " + address.getCity());
-        }
-        if(address.getZip() != null) {
-            sb.append(" " + address.getZip());
-        }
-
-        if(address.getStateCode() != null) {
-            sb.append(" " + address.getStateCode());
-        } else if(address.getState() != null) {
-            sb.append(" " + address.getState());
-        }
-
-        if(address.getCountryCode() != null) {
-            sb.append(", " + address.getCountryCode());
-        }
-        return sb.toString();
-    }
+    private Integer lastStep;
+    private Integer totalStep;
+    private String latestMessage;
+//
+//    @Getter(AccessLevel.NONE)
+//    private String location;
+//
+//    public String getLocation() {
+//        StringBuilder sb = new StringBuilder();
+//        if(address.getStreetName() != null) {
+//            sb.append(address.getStreetName());
+//        }
+//        if(address.getCity() != null) {
+//            sb.append(", " + address.getCity());
+//        }
+//        if(address.getZip() != null) {
+//            sb.append(" " + address.getZip());
+//        }
+//
+//        if(address.getStateCode() != null) {
+//            sb.append(" " + address.getStateCode());
+//        } else if(address.getState() != null) {
+//            sb.append(" " + address.getState());
+//        }
+//
+//        if(address.getCountryCode() != null) {
+//            sb.append(", " + address.getCountryCode());
+//        }
+//        return sb.toString();
+//    }
 }
