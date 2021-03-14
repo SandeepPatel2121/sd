@@ -222,6 +222,7 @@ public class CollegeApplication {
                 for(Field field:step.getFieldList()){
                     if(field.getRequired().equalsIgnoreCase("YES")){
                         if(field.getFieldvalue()==null || field.getFieldvalue().isEmpty()){
+                            System.out.println(field.getFieldInternalName());
                             return false;
                         }
                     }

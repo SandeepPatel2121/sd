@@ -28,7 +28,7 @@ public class UserPreference {
     private Double entranceTestVerbal=0.0d;
     private Double entranceTestQuantitive=0.0d;
     private Double entranceTestWriting=0.0d;
-    private String entranceTestExamDate="";
+    private String entranceTestExamDate=null;
     private String interestFreeStudyCounselling="";
     private String degreeWantToAttend="";
     private String programWantToAttend="";

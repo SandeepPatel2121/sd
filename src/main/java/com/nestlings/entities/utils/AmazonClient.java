@@ -149,6 +149,8 @@ public class AmazonClient {
             case "user-recommendation":
                 keyName = getUserRecommendationsDocsKeyName(id);
                 break;
+            case "user-application":
+                keyName = getUserApplicationDocsKeyName(id);
             default:
                 keyName = "all/";
         }
@@ -169,6 +171,10 @@ public class AmazonClient {
 
     private String getUserRecommendationsDocsKeyName(String id){
         return "User/" + id + "/documents/recommendations/";
+    }
+
+    private String getUserApplicationDocsKeyName(String id){
+        return "User/" + id + "/documents/application/";
     }
 
     private String getScoreKeyName(String id,String score){
