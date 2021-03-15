@@ -10,6 +10,6 @@ import lombok.Setter;
 public class PostSubmissionRequest {
 
     private Integer userId;
-    public Integer postType=1;
+    public Integer postType=3;
     public String post;
 }
