@@ -10,6 +10,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ApplicationTrackDataResponse {
+
     private Integer createdBy;
     private String content;
     private String message;

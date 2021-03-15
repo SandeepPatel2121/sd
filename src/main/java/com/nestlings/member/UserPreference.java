@@ -33,5 +33,6 @@ public class UserPreference {
     private String degreeWantToAttend="";
     private String programWantToAttend="";
     private String whatsappNumber="";
-    private Double tutionBugdet=0.0d;
+    private Double tutionBudgetMinVal=0.0d;
+    private Double tutionBudgetMaxVal=0.0d;
 }

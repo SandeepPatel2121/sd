@@ -173,7 +173,8 @@ public class EntityConstants {
     public static final String DEGREE_WANT_TO_ATTEND="degreeWantToAttend";
     public static final String PROGRAM_WANT_TO_ATTEND="programWantToAttend";
     public static final String WHATSAPPNO="whatsappNumber";
-    public static final String TUTIONBUDGET="tutionBugdet";
+    public static final String TUTIONBUDGETMINVAL="tutionBudgetMinVal";
+    public static final String TUTIONBUDGETMAXVAL="tutionBudgetMaxVal";
 
 
     public static final String ATTACHMENT_TYPE="attachmentType";
