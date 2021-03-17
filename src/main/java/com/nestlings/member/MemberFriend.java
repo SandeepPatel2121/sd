@@ -14,6 +14,7 @@ public class MemberFriend {
     private String firstName;
     private String lastName;
     private Map<String,Object> relationshipDetails;
+    private String fireStoreUid;
 
     public String getDisplayName() {
         return getFirstName() + " " + getLastName();
