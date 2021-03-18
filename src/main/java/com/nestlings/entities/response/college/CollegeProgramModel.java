@@ -13,6 +13,6 @@ public class CollegeProgramModel {
     private Integer unitid;
     private float cipcode;
     private Integer majornum;
-    private String name;
+    private String programName;
     private String degreeTypes;
 }
