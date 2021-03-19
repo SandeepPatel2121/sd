@@ -63,6 +63,7 @@ public class QueryConstants {
     public static final String REFUNDS_URL = "refundsUrl";
     public static final String SOURCE = "source";
     public static final String MSG_PLEASE_ENTER_FRIEND_USER_ID = "Please Enter Friend User Id";
+    public static final String MSG_UNABLE_TO_SENT_REQUEST = "You're Unable To Sent Request To Yourself";
     public static final String FRIEND_USER_ID = "friendUserId";
     public static final String FRIEND_ID = "friendId";
     public static final String OR_LOWER_U_LAST_NAME_LIKE = "or lower(u.lastName) like '%";
