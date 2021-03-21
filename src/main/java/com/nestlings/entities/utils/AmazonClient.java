@@ -151,6 +151,10 @@ public class AmazonClient {
                 break;
             case "user-application":
                 keyName = getUserApplicationDocsKeyName(id);
+                break;
+            case "university-coverImage":
+                keyName = getUniversityCoverImageKeyName(id);
+                break;
             default:
                 keyName = "all/";
         }
@@ -175,6 +179,10 @@ public class AmazonClient {
 
     private String getUserApplicationDocsKeyName(String id){
         return "User/" + id + "/documents/application/";
+    }
+
+    private String getUniversityCoverImageKeyName(String id){
+        return "University/" + id + "/coverImage/";
     }
 
     private String getScoreKeyName(String id,String score){

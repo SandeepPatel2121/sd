@@ -36,6 +36,7 @@ public class CollegeDetails {
     private String generalUrl;
     private boolean interested;
     private String coverImageUrl;
+    private String scholarship;
     private String profileImageUrl;
     private String genderAdmitted;
     private CollegeYearlyCost yearlyCost;
@@ -273,6 +274,14 @@ public class CollegeDetails {
 
     public void setCoverImageUrl(String coverImageUrl) {
         this.coverImageUrl = coverImageUrl;
+    }
+
+    public String getScholarship() {
+        return scholarship;
+    }
+
+    public void setScholarship(String scholarship) {
+        this.scholarship = scholarship;
     }
 
     public String getGenderAdmitted() {

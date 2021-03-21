@@ -1,8 +1,5 @@
 package com.nestlings.application;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.nestlings.association.Address;
-import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
