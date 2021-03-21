@@ -35,6 +35,8 @@ public class NestlingUtils {
     public static final String UNIVERSITY_APPLICATION_APPLICATION_IN_CONSIDERATION = "APPLICATION_IN_CONSIDERATION";
     public static final String UNIVERSITY_APPLICATION_APPLICATION_NEEDS_MORE_INFO = "APPLICATION_NEEDS_MORE_INFO";
     public static final String UNIVERSITY_APPLICATION_APPLICATION_WAITLISTED = "APPLICATION_WAITLISTED";
+    public static final String UNIVERSITY_APPLICATION_APPLICATION_OFFER_ACCEPTED = "OFFER_ACCEPTED";
+    public static final String UNIVERSITY_APPLICATION_APPLICATION_OFFER_REJECTED = "OFFER_REJECTED";
 
     static {
         loadUniversityApplicationStatuses();
@@ -48,6 +50,8 @@ public class NestlingUtils {
         universityApplicationStatuses.put(18, NestlingUtils.UNIVERSITY_APPLICATION_APPLICATION_IN_CONSIDERATION);
         universityApplicationStatuses.put(19, NestlingUtils.UNIVERSITY_APPLICATION_APPLICATION_NEEDS_MORE_INFO);
         universityApplicationStatuses.put(20, NestlingUtils.UNIVERSITY_APPLICATION_APPLICATION_WAITLISTED);
+        universityApplicationStatuses.put(21, NestlingUtils.UNIVERSITY_APPLICATION_APPLICATION_OFFER_ACCEPTED);
+        universityApplicationStatuses.put(22, NestlingUtils.UNIVERSITY_APPLICATION_APPLICATION_OFFER_REJECTED);
     }
 
     public static String getUniversityApplicationStatusByStatusId(Integer statusId) {
