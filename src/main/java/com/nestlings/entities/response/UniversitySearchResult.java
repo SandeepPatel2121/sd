@@ -9,4 +9,5 @@ import lombok.Setter;
 public class UniversitySearchResult extends BaseUniversity{
 
     private Integer totalApplications = 0;
+    private String scholarship;
 }

@@ -10,4 +10,5 @@ public class SuggstedUniversityResponse extends BaseUniversity{
     
     private String totalApplications;
     private boolean collegeRecommended;
+    private String scholarship;
   }
