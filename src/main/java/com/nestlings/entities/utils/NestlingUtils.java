@@ -27,6 +27,8 @@ public class NestlingUtils {
     private static final Map<Integer, String> universityApplicationStatuses = new HashMap<>();
     
     public static final List<NotificationType> emailSenderExcludeUserActions = new ArrayList();
+
+    public static final List<String> defaultUsernames = new ArrayList();
     
     public static final String UNIVERSITY_APPLICATION_APPLICATION_SENT = "APPLICATION_SENT";
     public static final String UNIVERSITY_APPLICATION_APPLICATION_ACCEPTED = "APPLICATION_ACCEPTED";
@@ -40,6 +42,8 @@ public class NestlingUtils {
 
     static {
         loadUniversityApplicationStatuses();
+        loadEmailExcludeUserActions();
+        loadDefaultUserids();
     }
 
     public static void loadUniversityApplicationStatuses() {
@@ -54,8 +58,25 @@ public class NestlingUtils {
         universityApplicationStatuses.put(22, NestlingUtils.UNIVERSITY_APPLICATION_APPLICATION_OFFER_REJECTED);
     }
 
+    public static void loadEmailExcludeUserActions() {
+        emailSenderExcludeUserActions.add(NotificationType.PROFILE_VIEW);
+        emailSenderExcludeUserActions.add(NotificationType.MESSAGE_FROM_USER);
+        emailSenderExcludeUserActions.add(NotificationType.MESSAGE_REPLY_FROM_USER);
+        emailSenderExcludeUserActions.add(NotificationType.POST_REPLY_FROM_USER);
+        emailSenderExcludeUserActions.add(NotificationType.FRIEND_REQUEST_RECEIVED);
+        emailSenderExcludeUserActions.add(NotificationType.COLLEGE_APPLICATION_SUBMIT);
+        emailSenderExcludeUserActions.add(NotificationType.COLLEGE_APPLICATION_STATUS_CHANGE);
+        emailSenderExcludeUserActions.add(NotificationType.COLLEGE_APPLICATION_OFFER_ACCEPT);
+        emailSenderExcludeUserActions.add(NotificationType.COLLEGE_APPLICATION_OFFER_REJECT);
+        emailSenderExcludeUserActions.add(NotificationType.COLLEGE_APPLICATION_REPLY);
+    }
+
     public static String getUniversityApplicationStatusByStatusId(Integer statusId) {
         return universityApplicationStatuses.get(statusId);
+    }
+
+    public static void loadDefaultUserids() {
+        defaultUsernames.add("support@nestlings.com");
     }
 
 
