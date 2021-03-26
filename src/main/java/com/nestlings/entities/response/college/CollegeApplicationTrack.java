@@ -20,9 +20,12 @@ public class CollegeApplicationTrack {
 
     private Integer applicationId;
     private Integer collegeDetailsId;
+    private Integer collegeStatusId;
+    private String collegeName;
+    private String coverImageUrl;
     private Integer userId;
-    private Integer statusId;
-    private String status;
+    private Integer applicationStatusId;
+    private String applicationStatus;
     private MemberInfo memberInfo;
     private String createdDate;
     private String updatedDate;
