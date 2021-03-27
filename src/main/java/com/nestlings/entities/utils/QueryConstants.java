@@ -18,6 +18,8 @@ public class QueryConstants {
     public static final String APPLICATION_TRACK_ID = "applicationTrackId";
     public static final String LASTSTEP = "lastStep";
     public static final String TOTALSTEP = "totalStep";
+    public static final String SUBMITTEDBY="submittedBy";
+    public static final String APP_BUILDER_ID="appBuilderId";
     public static final String MESSAGE_ID = "messageId";
     public static final String USER_TYPE = "userType";
     public static final String RATINGS = "ratings";
