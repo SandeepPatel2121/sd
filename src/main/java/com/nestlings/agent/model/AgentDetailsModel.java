@@ -32,5 +32,6 @@ public class AgentDetailsModel {
     private String contactNumber;
     private String selectUserType;
     private Integer statusId;
+    private String referringCountry;
     
 }
