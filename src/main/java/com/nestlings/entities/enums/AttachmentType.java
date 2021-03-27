@@ -4,5 +4,6 @@ public enum AttachmentType {
     ESSAY,
     EDUCATION,
     RECOMMENDATION,
-    APPLICATION
+    APPLICATION,
+    STUDENT
 }

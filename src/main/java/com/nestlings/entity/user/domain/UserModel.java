@@ -19,6 +19,8 @@ public class UserModel {
     private String password;
     private String authToken;
     private String role;
+    private String description;
+    private String subject;
     private UserDeviceModel deviceModel;
     private boolean isPreferenceSaved;
 
