@@ -7,6 +7,7 @@ import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.security.SecureRandom;
 import java.time.DateTimeException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -145,5 +146,16 @@ public class NestlingUtils {
         BigDecimal decimal = new BigDecimal(Double.toString(value));
         decimal = decimal.setScale(places, RoundingMode.HALF_UP);
         return decimal.doubleValue();
+    }
+
+    public static String getRandomPassword(int len) {
+        String characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        SecureRandom rnd = new SecureRandom();
+
+        StringBuilder sb = new StringBuilder(len);
+        for (int i = 0; i < len; i++) {
+            sb.append(characters.charAt(rnd.nextInt(characters.length())));
+        }
+        return sb.toString();
     }
 }

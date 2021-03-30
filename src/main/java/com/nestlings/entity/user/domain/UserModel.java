@@ -6,18 +6,21 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- *
  * @author bypt-dev-laptop-9
  */
 @Getter
 @Setter
 public class UserModel {
-    
+
     private Long id;
     private String username;
+    private String firstName;
+    private String lastName;
     private String password;
     private String authToken;
     private String role;
+    private String description;
+    private String subject;
     private UserDeviceModel deviceModel;
     private boolean isPreferenceSaved;
 

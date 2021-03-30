@@ -3,44 +3,45 @@ package com.nestlings.entities.response.college;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.nestlings.application.Field;
 import com.nestlings.application.Step;
-import com.nestlings.entities.messaging.SendMessageRequest;
+import com.nestlings.entities.response.ApplicationTrackDataResponse;
 import com.nestlings.entities.utils.NestlingUtils;
-import com.nestlings.member.MemberInfo;
 
 import java.lang.reflect.Type;
 import java.util.List;
 
-public class CollegeApplication {
 
+public class CollegeApplicationDataViewModel {
     private Integer applicationId;
     private Integer collegeDetailsId;
+    //private MemberInfo memberInfo;
+    private long applicationTrackId;
+    private String collegeName;
+    private Integer collegeAdminUserId;
+    private Integer collegeStatusId;
+    private String coverImageUrl;
     private Integer userId;
-    private Integer statusId;
-    private List<Step> stepsList;
+    private String firstName;
+    private String lastName;
+    private String userProfileImageUrl;
+    private String applicationName;
+    private Integer applicationStatusId;
+    private String applicationStatusValue;
+    private String appliedBy;
 
+    @JsonIgnore
+    private Integer submittedBy;
+
+    private Integer lastStep;
+    private Integer totalStep;
+    private String createdDate;
+    private String updatedDate;
+
+    private List<Step> stepsList;
     @JsonIgnore
     private String applicationData;
 
-    private String firstName;
-    private String lastName;
-    private MemberInfo memberInfo;
-    private String createdDate;
-    private String updatedDate;
-    private Integer messageThreadId;
-    private Integer collegeAdminUserId;
-
-    @JsonIgnore
-    private SendMessageRequest messageRequest;
-
-    private String profileImageUrl;
-    private long applicationTrackId;
-
-    private Integer lastStep;
-
-    private Integer totalStep;
-    private Integer appBuilderId;
+    private List<ApplicationTrackDataResponse> applicationTrackData;
 
     public Integer getApplicationId() {
         return applicationId;
@@ -59,12 +60,6 @@ public class CollegeApplication {
     }
     public void setUserId(Integer userId) {
         this.userId = userId;
-    }
-    public Integer getStatusId() {
-        return statusId;
-    }
-    public void setStatusId(Integer statusId) {
-        this.statusId = statusId;
     }
     public List<Step> getStepsList() {
         return stepsList;
@@ -102,13 +97,13 @@ public class CollegeApplication {
         this.lastName = lastName;
     }
 
-    public MemberInfo getMemberInfo() {
-        return memberInfo;
-    }
-
-    public void setMemberInfo(MemberInfo memberInfo) {
-        this.memberInfo = memberInfo;
-    }
+//    public MemberInfo getMemberInfo() {
+//        return memberInfo;
+//    }
+//
+//    public void setMemberInfo(MemberInfo memberInfo) {
+//        this.memberInfo = memberInfo;
+//    }
 
     public String getCreatedDate() {
         return createdDate;
@@ -134,36 +129,12 @@ public class CollegeApplication {
         }
     }
 
-    public Integer getMessageThreadId() {
-        return messageThreadId;
-    }
-
-    public void setMessageThreadId(Integer messageThreadId) {
-        this.messageThreadId = messageThreadId;
-    }
-
     public Integer getCollegeAdminUserId() {
         return collegeAdminUserId;
     }
 
     public void setCollegeAdminUserId(Integer collegeAdminUserId) {
         this.collegeAdminUserId = collegeAdminUserId;
-    }
-
-    public SendMessageRequest getMessageRequest() {
-        return messageRequest;
-    }
-
-    public void setMessageRequest(SendMessageRequest messageRequest) {
-        this.messageRequest = messageRequest;
-    }
-
-    public String getProfileImageUrl() {
-        return profileImageUrl;
-    }
-
-    public void setProfileImageUrl(String profileImageUrl) {
-        this.profileImageUrl = profileImageUrl;
     }
 
     public long getApplicationTrackId() {
@@ -174,35 +145,9 @@ public class CollegeApplication {
         this.applicationTrackId = applicationTrackId;
     }
 
-//    public Integer getLastStep() {
-//        int stepCount = 1;
-//        if(stepsList != null){
-//            for(Step step:stepsList){
-//                for(Field field:step.getFieldList()){
-//                    if(field.getRequired().equalsIgnoreCase("YES")){
-//                        if(field.getFieldvalue()==null || field.getFieldvalue().isEmpty()){
-//                            return stepCount;
-//                        }
-//                    }
-//                }
-//                if(stepCount<stepsList.size()){
-//                    stepCount++;
-//                }
-//            }
-//        }
-//        return stepCount;
-//    }
-
     public void setLastStep(Integer lastStep) {
         this.lastStep = lastStep;
     }
-
-//    public Integer getTotalStep() {
-//        if(stepsList != null){
-//            return stepsList.size();
-//        }
-//        return null;
-//    }
 
     public void setTotalStep(Integer totalStep) {
         this.totalStep = totalStep;
@@ -217,29 +162,83 @@ public class CollegeApplication {
         return totalStep;
     }
 
-    public boolean validateApplicationData(){
-        if(stepsList != null){
-            for(Step step:stepsList){
-                for(Field field:step.getFieldList()){
-                    if(field.getRequired().equalsIgnoreCase("YES")){
-                        if(field.getFieldvalue()==null || field.getFieldvalue().isEmpty()){
-                            System.out.println(field.getFieldInternalName());
-                            return false;
-                        }
-                    }
-                }
-            }
-            return true;
-        }
-        return false;
+    public String getCollegeName() {
+        return collegeName;
     }
 
-    public Integer getAppBuilderId() {
-        return appBuilderId;
+    public void setCollegeName(String collegeName) {
+        this.collegeName = collegeName;
     }
 
-    public void setAppBuilderId(Integer appBuilderId) {
-        this.appBuilderId = appBuilderId;
+    public Integer getCollegeStatusId() {
+        return collegeStatusId;
+    }
+
+    public void setCollegeStatusId(Integer collegeStatusId) {
+        this.collegeStatusId = collegeStatusId;
+    }
+
+    public String getCoverImageUrl() {
+        return coverImageUrl;
+    }
+
+    public void setCoverImageUrl(String coverImageUrl) {
+        this.coverImageUrl = coverImageUrl;
+    }
+
+    public String getUserProfileImageUrl() {
+        return userProfileImageUrl;
+    }
+
+    public void setUserProfileImageUrl(String userProfileImageUrl) {
+        this.userProfileImageUrl = userProfileImageUrl;
+    }
+
+    public Integer getApplicationStatusId() {
+        return applicationStatusId;
+    }
+
+    public void setApplicationStatusId(Integer applicationStatusId) {
+        this.applicationStatusId = applicationStatusId;
+    }
+
+    public String getApplicationStatusValue() {
+        return applicationStatusValue;
+    }
+
+    public void setApplicationStatusValue(String applicationStatusValue) {
+        this.applicationStatusValue = applicationStatusValue;
+    }
+
+    public String getAppliedBy() {
+        return appliedBy;
+    }
+
+    public void setAppliedBy(String appliedBy) {
+        this.appliedBy = appliedBy;
+    }
+
+    public Integer getSubmittedBy() {
+        return submittedBy;
+    }
+
+    public void setSubmittedBy(Integer submittedBy) {
+        this.submittedBy = submittedBy;
+    }
+
+    public List<ApplicationTrackDataResponse> getApplicationTrackData() {
+        return applicationTrackData;
+    }
+
+    public void setApplicationTrackData(List<ApplicationTrackDataResponse> applicationTrackData) {
+        this.applicationTrackData = applicationTrackData;
+    }
+
+    public String getApplicationName() {
+        return applicationName;
+    }
+
+    public void setApplicationName(String applicationName) {
+        this.applicationName = applicationName;
     }
 }
-
