@@ -22,5 +22,6 @@ public class MemberCollegeRequest {
     private String collegeMinorCipCode;
     private Double gpa;
     private String dateComplete;
+    private Integer studentId;
     
 }

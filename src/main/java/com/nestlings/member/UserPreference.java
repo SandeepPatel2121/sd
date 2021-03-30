@@ -35,4 +35,5 @@ public class UserPreference {
     private String whatsappNumber="";
     private Double tutionBudgetMinVal=0.0d;
     private Double tutionBudgetMaxVal=0.0d;
+    private Integer studentId;
 }

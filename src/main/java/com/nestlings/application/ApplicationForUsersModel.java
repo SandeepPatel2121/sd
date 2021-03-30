@@ -25,6 +25,8 @@ public class ApplicationForUsersModel {
     private Integer lastStep;
     private Integer totalStep;
     private String latestMessage;
+    private String firstName;
+    private String lastName;
 //
 //    @Getter(AccessLevel.NONE)
 //    private String location;

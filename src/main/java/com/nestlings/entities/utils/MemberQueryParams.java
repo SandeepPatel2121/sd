@@ -25,7 +25,8 @@ public enum MemberQueryParams {
     STATUS_ID("statusId"),
     AMBITION("ambition"),
     APPLE_ID("appleID"),
-    PHONE_NUMBER("phoneNumber");
+    PHONE_NUMBER("phoneNumber"),
+    AGENTID("agentId");
 
     private final String name;
     MemberQueryParams(final String name) {

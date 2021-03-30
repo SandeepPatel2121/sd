@@ -41,6 +41,10 @@ public class MemberDetails {
     private String profileImageUrl;
     private String securityRole;
     private boolean hasJobSearchParams;
+    private Integer studentId;
+    private String phoneNumber;
+    private String emailID;
+    private String password;
 
     public Integer getUserId() {
         return userId;
@@ -48,6 +52,22 @@ public class MemberDetails {
 
     public void setUserId(Integer userId) {
         this.userId = userId;
+    }
+    
+     public String getEmailID() {
+        return emailID;
+    }
+
+    public void setEmailID(String emailID) {
+        this.emailID = emailID;
+    }
+    
+     public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Integer getUserDetailsId() {
@@ -72,6 +92,14 @@ public class MemberDetails {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+    
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getDob() {
@@ -263,6 +291,15 @@ public class MemberDetails {
     public void setSecurityRole(String securityRole) {
         this.securityRole = securityRole;
     }
+    
+      public Integer getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(Integer studentId) {
+        this.studentId = studentId;
+    }
+    
 
     public Integer getAge() {
         if(getDob() != null) {

@@ -39,6 +39,7 @@ public class EntityConstants {
 
     public static final String STUDENT = "STUDENT";
     public static final String COLLEGE = "COLLEGE";
+    public static final String COMPANY = "COMPANY";
 
     /*
      * EMAIL

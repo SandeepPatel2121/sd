@@ -18,6 +18,8 @@ public class MemberInstitution {
     private String minor;
     private Double gpa;
     private String dateCompleted;
+    private Integer studentId;
+    
     private Gson gson = new Gson();
 
     public Integer getUserInstitutionId() {
@@ -34,6 +36,14 @@ public class MemberInstitution {
 
     public void setUserId(Integer userId) {
         this.userId = userId;
+    }
+    
+    public Integer getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(Integer studentId) {
+        this.studentId = studentId;
     }
 
     public Integer getCollegeDetailsId() {

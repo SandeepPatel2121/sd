@@ -1,7 +1,9 @@
 
 package com.nestlings.email.config;
 
+import com.nestlings.agent.model.AgentDetailsModel;
 import com.nestlings.entities.email.EmailDetail;
+import com.nestlings.member.MemberDetails;
 import org.springframework.beans.factory.annotation.Value;
 
 import java.io.UnsupportedEncodingException;
@@ -40,18 +42,19 @@ public class SendEmailConfig {
     @Value("${nestlings.server.url}")
     private String nestlingsServerUrl;
     
+   
     public void send(EmailDetail emailDetail) throws  MessagingException {
            
         Properties props = System.getProperties();
         props.put("mail.transport.protocol", "smtp");
-        props.put("mail.smtp.port",smtpPort);
+        props.put("mail.smtp.port",smtpHost);
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.starttls.required", "true");
             Session session = Session.getDefaultInstance(props);
             MimeMessage msg = new MimeMessage(session);
         try {
-            msg.setFrom(new InternetAddress(fromAddress, "Nestlings"));
+            msg.setFrom(new InternetAddress("yes.kabutar@gmail.com", "Nestlings"));
         } catch (UnsupportedEncodingException e) {
             log.error("UnsupportedEncodingException {}",e.getMessage());
         }
@@ -60,7 +63,7 @@ public class SendEmailConfig {
         msg.setContent(emailDetail.getMessage(), "text/html");
             Transport transport = session.getTransport();
         try {
-            transport.connect(smtpHost,smtpUsername,smtpPassword);
+            transport.connect("Smtp.gmail.com","byptqa1@gmail.com","Bypt@2021");
             transport.sendMessage(msg, msg.getAllRecipients());
             log.debug("Email sent!");
           
@@ -72,5 +75,6 @@ public class SendEmailConfig {
             transport.close();
         }
 
-    }   
+    }
+
 }

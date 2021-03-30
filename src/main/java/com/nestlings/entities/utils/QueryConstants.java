@@ -70,7 +70,7 @@ public class QueryConstants {
     public static final String OR_LOWER_CONCAT_U_FIRST_NAME_U_LAST_NAME_LIKE = "or lower(concat(u.firstName,' ',u.lastName)) like '%";
     public static final String OR_LOWER_CONCAT_U_LAST_NAME_U_FIRST_NAME_LIKE = "or lower(concat(u.lastName,' ',u.firstName)) like '%";
     public static final String AND_LOWER_U_FIRST_NAME_LIKE = " AND (lower(u.firstName) like '%";
-
+    public static final String AGENTID = "agentId";
     /**
      * Messages Constants
      * */
@@ -90,6 +90,8 @@ public class QueryConstants {
     public static final String MAP_TOTAL_NOTIFICATION = "totalNotifications";
     public static final String MAP_TOTAL_UNREAD_NOTIFICATION = "totalUnreadNotifications";
     public static final String MAP_APPLICATION_DATA = "applicationData";
+    public static final String MAP_STUDENTS_DATA = "STUDENTS";
+
 
     /**
      * Other String Constants

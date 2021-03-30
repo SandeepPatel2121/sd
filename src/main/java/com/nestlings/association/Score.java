@@ -23,5 +23,6 @@ public class Score {
     private Float reading;
     private Float speaking;
     private String certificateUrl;
+    private Integer studentId;
     
 }
