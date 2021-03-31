@@ -13,4 +13,5 @@ public class NotificationRequest {
 
     private int page;
     private int limit;
+    private int totalRecord;
 }
