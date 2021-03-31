@@ -34,6 +34,10 @@ public class BaseUniversity {
     private String intake;
     private boolean saved;
     private BigDecimal applicationFees;
+    private Double tuitionGrad;
+    private Double commission;
+    private String commissionType;
+    private String totalCommission;
 
     @Getter(AccessLevel.NONE)
     private String searchString;

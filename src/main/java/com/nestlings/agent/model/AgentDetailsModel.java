@@ -17,7 +17,11 @@ public class AgentDetailsModel {
     private Integer userId;
     private String companyName;
     private String ownerName;
-    private String address;
+    private String street;
+    private String city;
+    private String state;
+    private String country;
+    private String zipcode;
     private String businessEmail;
     private String businessContactNumber;
     private String webSite;
@@ -33,5 +37,6 @@ public class AgentDetailsModel {
     private String selectUserType;
     private Integer statusId;
     private String referringCountry;
+    private String gender;
     
 }

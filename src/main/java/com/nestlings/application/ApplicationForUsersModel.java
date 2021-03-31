@@ -27,6 +27,10 @@ public class ApplicationForUsersModel {
     private String latestMessage;
     private String firstName;
     private String lastName;
+    private Double tuitionGrad;
+    private Double commission;
+    private String commissionType;
+    private String totalCommission;
 //
 //    @Getter(AccessLevel.NONE)
 //    private String location;

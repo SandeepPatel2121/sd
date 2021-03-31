@@ -1,8 +1,10 @@
 
 package com.nestlings.member;
 
+import com.nestlings.entities.response.SuggstedUniversityResponse;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.List;
 import org.springframework.util.StringUtils;
 
 /**
@@ -45,6 +47,8 @@ public class MemberDetails {
     private String phoneNumber;
     private String emailID;
     private String password;
+    List<SuggstedUniversityResponse> shortlisted_Universities;
+    private Integer totalUniversities;
 
     public Integer getUserId() {
         return userId;
@@ -52,6 +56,14 @@ public class MemberDetails {
 
     public void setUserId(Integer userId) {
         this.userId = userId;
+    }
+    
+     public Integer getTotalUniversities() {
+        return totalUniversities;
+    }
+
+    public void setTotalUniversities(Integer totalUniversities) {
+        this.totalUniversities = totalUniversities;
     }
     
      public String getEmailID() {
@@ -300,7 +312,14 @@ public class MemberDetails {
         this.studentId = studentId;
     }
     
+    public List<SuggstedUniversityResponse> getShortlisted_Universities() {
+        return shortlisted_Universities;
+    }
 
+    public void setShortlisted_Universities(List<SuggstedUniversityResponse> shortlisted_Universities) {
+        this.shortlisted_Universities = shortlisted_Universities;
+    }
+   
     public Integer getAge() {
         if(getDob() != null) {
             LocalDate today = LocalDate.now();
