@@ -1,5 +1,6 @@
 package com.nestlings.application;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,6 +13,7 @@ public class ApplicationInProgressModelForUni {
     private String collegeName;
     private Integer collegeStatusId;
     private String coverImageUrl;
+    private Integer userId;
     private String firstName;
     private String lastName;
     private String userProfileImageUrl;
@@ -24,6 +26,6 @@ public class ApplicationInProgressModelForUni {
     private Integer totalStep;
     private String appliedBy;
     private String latestMessage;
-
+    private Integer submittedBy;
 
 }
