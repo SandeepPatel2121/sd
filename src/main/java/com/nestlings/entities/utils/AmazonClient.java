@@ -155,6 +155,9 @@ public class AmazonClient {
             case "university-coverImage":
                 keyName = getUniversityCoverImageKeyName(id);
                 break;
+            case "post":
+                keyName = getPostKeyName(id);
+                break;
             default:
                 keyName = "all/";
         }
@@ -163,6 +166,10 @@ public class AmazonClient {
 
     private String getUniversityPicsKeyName(String id){
         return "University/" + id + "/";
+    }
+
+    private String getPostKeyName(String id){
+        return "Post/" + id + "/";
     }
 
     private String getUserDocsKeyName(String id){
