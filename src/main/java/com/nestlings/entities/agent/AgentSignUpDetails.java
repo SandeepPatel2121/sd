@@ -45,6 +45,6 @@ public class AgentSignUpDetails extends AbstractDomain implements Serializable {
     private String country;
     private String zipcode;
     private String gender;
-    private String referingCountry;
+    private String referringCountry;
     
 }

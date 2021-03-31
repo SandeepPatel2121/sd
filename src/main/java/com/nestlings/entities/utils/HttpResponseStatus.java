@@ -60,8 +60,7 @@ public class HttpResponseStatus {
     public static final String APPLICATION_LIST = "success ! application listed successfully.";
 
     public static final String NOTIFICATION_SENT = "Notification has been sent.";
-
-
-
     
+    public static final String DASHBOARD_LIST = "success ! Dashboard listed successfully.";
+   
 }

@@ -38,6 +38,5 @@ public class AgentDetailsModel {
     private Integer statusId;
     private String referringCountry;
     private String gender;
-    private String referingCountry;
     
 }
