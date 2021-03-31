@@ -38,5 +38,4 @@ public class CollegeDetailsForUniversity {
     private BigDecimal applicationFees;
     private BigDecimal tutionFeePerYear;
     private BigDecimal costOfLivingPerYear;
-
 }

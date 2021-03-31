@@ -51,6 +51,8 @@ public class CollegeDetails {
     private boolean saved;
     private Integer rank;
     private Integer acceptanceRate;
+    private BigDecimal costOfLivingPerYear;
+    private BigDecimal tutionFeePerYear;
 
     public Integer getCollegeDetailsId() {
         return collegeDetailsId;
@@ -397,5 +399,21 @@ public class CollegeDetails {
 
     public void setProfileImageUrl(String profileImageUrl) {
         this.profileImageUrl = profileImageUrl;
+    }
+
+    public BigDecimal getCostOfLivingPerYear() {
+        return costOfLivingPerYear;
+    }
+
+    public void setCostOfLivingPerYear(BigDecimal costOfLivingPerYear) {
+        this.costOfLivingPerYear = costOfLivingPerYear;
+    }
+
+    public BigDecimal getTutionFeePerYear() {
+        return tutionFeePerYear;
+    }
+
+    public void setTutionFeePerYear(BigDecimal tutionFeePerYear) {
+        this.tutionFeePerYear = tutionFeePerYear;
     }
 }
