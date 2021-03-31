@@ -1,5 +1,7 @@
 package com.nestlings.entities.post;
 
+import com.nestlings.entities.fileupload.PostAttachmentResponse;
+import com.nestlings.entities.fileupload.UserDocumentResponse;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -24,4 +26,5 @@ public class Post {
 	private String securityRole;
 	private List<PostReply> postReplies;
 	private String profileImageUrl;
+	private List<PostAttachmentResponse> attachments;
 }
