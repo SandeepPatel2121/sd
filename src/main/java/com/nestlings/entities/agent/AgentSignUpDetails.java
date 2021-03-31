@@ -32,7 +32,6 @@ public class AgentSignUpDetails extends AbstractDomain implements Serializable {
     
     private String companyName;
     private String ownerName;
-    private String address;
     private String email;
     private String contactnumber;
     private String webSite;
@@ -40,10 +39,12 @@ public class AgentSignUpDetails extends AbstractDomain implements Serializable {
     private String instagramLink;
     private String linkedLink;
     private String twitterLink;
-    
-    
-    
-    
-    
+    private String street;
+    private String city;
+    private String state;
+    private String country;
+    private String zipcode;
+    private String gender;
+    private String referingCountry;
     
 }

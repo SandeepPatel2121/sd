@@ -93,6 +93,7 @@ public class QueryConstants {
     public static final String MAP_TOTAL_UNREAD_NOTIFICATION = "totalUnreadNotifications";
     public static final String MAP_APPLICATION_DATA = "applicationData";
     public static final String MAP_STUDENTS_DATA = "STUDENTS";
+     public static final String MAP_UNIVERSITY = "TOTAL UNIVERSITY";
 
 
     /**
