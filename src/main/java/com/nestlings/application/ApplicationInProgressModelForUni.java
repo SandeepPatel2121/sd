@@ -1,6 +1,7 @@
 package com.nestlings.application;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.math.BigDecimal;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -27,5 +28,8 @@ public class ApplicationInProgressModelForUni {
     private String appliedBy;
     private String latestMessage;
     private Integer submittedBy;
-
+    private Double commission;
+    private String commissionType;
+    private BigDecimal totalCommission;
+    private Double tuitionGrad;
 }

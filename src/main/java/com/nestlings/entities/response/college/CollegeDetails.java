@@ -53,6 +53,10 @@ public class CollegeDetails {
     private Integer acceptanceRate;
     private BigDecimal costOfLivingPerYear;
     private BigDecimal tutionFeePerYear;
+    private Double commission;
+    private String commissionType;
+    private String totalCommission;
+    private Double tuitionGrad;
 
     public Integer getCollegeDetailsId() {
         return collegeDetailsId;
@@ -416,4 +420,37 @@ public class CollegeDetails {
     public void setTutionFeePerYear(BigDecimal tutionFeePerYear) {
         this.tutionFeePerYear = tutionFeePerYear;
     }
+    
+     public String getCommissionType() {
+        return commissionType;
+    }
+
+    public void setCommissionType(String commissionType) {
+        this.commissionType = commissionType;
+    }
+    
+    public String getTotalCommission() {
+        return totalCommission;
+    }
+
+    public void setTotalCommission(String totalCommission) {
+        this.totalCommission = totalCommission;
+    }
+    
+    public Double getTuitionGrad() {
+        return tuitionGrad;
+    }
+
+    public void setTuitionGrad(Double tuitionGrad) {
+        this.tuitionGrad = tuitionGrad;
+    }
+    
+    public Double getCommission() {
+        return commission;
+    }
+
+    public void setCommission(Double commission) {
+        this.commission = commission;
+    }
+
 }
