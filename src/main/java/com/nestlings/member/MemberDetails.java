@@ -10,6 +10,7 @@ import org.springframework.util.StringUtils;
 /**
  *
  * @author ú
+ *
  */
 public class MemberDetails {
     
