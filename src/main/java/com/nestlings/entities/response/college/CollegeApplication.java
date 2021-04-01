@@ -41,6 +41,7 @@ public class CollegeApplication {
 
     private Integer totalStep;
     private Integer appBuilderId;
+    private Integer submittedBy;
 
     public Integer getApplicationId() {
         return applicationId;
@@ -240,6 +241,14 @@ public class CollegeApplication {
 
     public void setAppBuilderId(Integer appBuilderId) {
         this.appBuilderId = appBuilderId;
+    }
+
+    public Integer getSubmittedBy() {
+        return submittedBy;
+    }
+
+    public void setSubmittedBy(Integer submittedBy) {
+        this.submittedBy = submittedBy;
     }
 }
 

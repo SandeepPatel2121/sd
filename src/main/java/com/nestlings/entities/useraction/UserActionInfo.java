@@ -9,6 +9,7 @@ public class UserActionInfo {
     private UserPersonalDetails senderDetails;
     private List<UserPersonalDetails> recieversDetails;
     private NotificationType notificationType;
+    private UserPersonalDetails agentDetails;
 
     public UserActionInfo() {
     }
@@ -22,6 +23,13 @@ public class UserActionInfo {
         this.senderDetails = senderDetails;
         this.recieversDetails = recieversDetails;
         this.notificationType = notificationType;
+    }
+
+    public UserActionInfo(UserPersonalDetails senderDetails, List<UserPersonalDetails> recieversDetails,UserPersonalDetails agentDetails, NotificationType notificationType) {
+        this.senderDetails = senderDetails;
+        this.recieversDetails = recieversDetails;
+        this.notificationType = notificationType;
+        this.agentDetails=agentDetails;
     }
 
     public UserPersonalDetails getSenderDetails() {
@@ -46,5 +54,13 @@ public class UserActionInfo {
 
     public void setNotificationType(NotificationType notificationType) {
         this.notificationType = notificationType;
+    }
+
+    public UserPersonalDetails getAgentDetails() {
+        return agentDetails;
+    }
+
+    public void setAgentDetails(UserPersonalDetails agentDetails) {
+        this.agentDetails = agentDetails;
     }
 }

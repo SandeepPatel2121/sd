@@ -14,6 +14,7 @@ import lombok.Setter;
 public class EmailNotificationPayload {
     private Integer senderUserId;
     private Integer receiverUserId;
+    private Integer agentId;
     private NotificationType notificationType;
     private Notification notification;
 }
