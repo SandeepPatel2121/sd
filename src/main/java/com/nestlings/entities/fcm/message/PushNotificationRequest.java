@@ -15,20 +15,23 @@ public class PushNotificationRequest {
     private String topic;
     private String token;
     private String notificationType;
+    private String jsonObject = null;
 
     public PushNotificationRequest() {
     }
 
-    public PushNotificationRequest(String title, String messageBody, String topicName) {
+    public PushNotificationRequest(String title, String messageBody, String topicName,String jsonObject) {
         this.title = title;
         this.message = messageBody;
         this.topic = topicName;
+        this.jsonObject = jsonObject;
     }
     
-    public PushNotificationRequest(String notificationType, String title, String messageBody,String token) {
+    public PushNotificationRequest(String notificationType, String title, String messageBody,String token,String jsonObject) {
         this.notificationType = notificationType;
         this.title = title;
         this.message = messageBody;
         this.token = token;
+        this.jsonObject = jsonObject;
     }
 }
